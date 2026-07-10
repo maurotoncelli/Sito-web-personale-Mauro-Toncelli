@@ -1,4 +1,5 @@
-import posts from "./journal.json";
+import legacyPosts from "./journal.json";
+import cmsPosts from "./journal-cms.json";
 
 export type JournalPost = {
   slug: string;
@@ -10,7 +11,14 @@ export type JournalPost = {
   content: string;
 };
 
-export const journalPosts = posts as JournalPost[];
+/**
+ * Articoli storici (importati da WordPress, journal.json) + nuovi articoli
+ * creati dal pannello /keystatic (journal-cms.json, generato al prebuild).
+ */
+export const journalPosts = [
+  ...(cmsPosts as JournalPost[]),
+  ...(legacyPosts as JournalPost[]),
+].sort((a, b) => (a.date < b.date ? 1 : -1));
 
 export const journalCategories = Array.from(
   new Set(journalPosts.flatMap((p) => p.categories))

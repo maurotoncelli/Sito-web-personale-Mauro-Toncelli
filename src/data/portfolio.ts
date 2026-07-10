@@ -1,6 +1,6 @@
 import media from "./media.json";
 
-export type MediaItem = { src: string; width: number; height: number };
+export type MediaItem = { src: string; width: number; height: number; title?: string };
 
 const groups = media as Record<string, MediaItem[]>;
 

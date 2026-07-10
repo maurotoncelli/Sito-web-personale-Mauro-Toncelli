@@ -18,12 +18,40 @@ npm run build   # build di produzione (statica/SSG)
 - `src/data/services.ts` — dati strutturali dei 6 macro-servizi + drone (prezzi, gallery); i testi stanno nei messages.
 - `src/data/portfolio.ts` — categorie portfolio (forti + nicchie/tag) collegate ai gruppi di immagini.
 - `src/data/videos.ts` — i 7 video del portfolio con titoli e clienti reali.
-- `src/data/journal.json` — articoli importati da WordPress con `../scripts/importa-journal.py`.
-- `src/data/media.json` — indice immagini generato da `../scripts/prepara-media.py`.
-- `src/data/home.ts` — slide della hero.
+- `src/data/journal.json` — articoli storici importati da WordPress; i nuovi si creano dal pannello.
+- `src/data/media.json`, `hero.json`, `journal-cms.json` — **generati** da `scripts/genera-dati.ts` a partire da `content/` (non modificarli a mano).
+- `content/` — contenuti gestiti dal pannello `/keystatic` (gallerie, hero, nuovi articoli).
 - `public/images/` — immagini ottimizzate (max 2400px, JPEG q80).
 - `public/videos/` — video compressi con ffmpeg (audio incluso) + poster.
 - `next.config.ts` — redirect 301 dai vecchi URL WordPress (servizi, about, articoli data-based).
+
+## Pannello di gestione (Keystatic)
+
+Su `/keystatic` si gestiscono senza toccare il codice:
+
+- **Gallerie foto** — una voce per gruppo (`home`, `about`, `clienti` + categorie
+  portfolio): aggiungere/cancellare foto, riordinare (la prima è la copertina),
+  dare un **titolo** a ogni foto (usato come alt/SEO).
+- **Hero (home)** — le slide: immagine, categoria, video; il **crop verticale
+  9:16 per mobile viene generato in automatico** al build se non indicato.
+- **Journal** — nuovi articoli in markdown con immagini.
+
+Ogni salvataggio diventa un **commit su GitHub** → Vercel rideploya da solo
+(1-2 minuti). Lo script `npm run genera-dati` (eseguito in automatico prima di
+ogni build) trasforma `content/` nei JSON consumati dal sito e genera i crop.
+
+### Setup una tantum della GitHub App (per usare il pannello online)
+
+1. In locale: `npm run dev`, aprire `http://localhost:3000/keystatic` →
+   il wizard "Setup GitHub" crea la GitHub App sul repo e scrive le chiavi in `.env`.
+2. Copiare su Vercel (Settings → Environment Variables) le variabili generate:
+   `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`,
+   `KEYSTATIC_SECRET`, `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`.
+3. Redeploy: da quel momento `https://<dominio>/keystatic` funziona da qualsiasi
+   dispositivo con il login GitHub.
+
+Per lavorare in locale senza passare da GitHub: `KEYSTATIC_STORAGE=local npm run dev`
+(le modifiche scrivono direttamente sui file, poi commit manuale).
 
 ## Immagini
 

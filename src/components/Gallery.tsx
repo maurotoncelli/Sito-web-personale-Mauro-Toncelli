@@ -71,7 +71,7 @@ export function Gallery({
             {item.kind === "photo" ? (
               <Image
                 src={item.src}
-                alt={`${label} ${i + 1}`}
+                alt={item.title || `${label} ${i + 1}`}
                 width={item.width}
                 height={item.height}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -112,7 +112,7 @@ export function Gallery({
           {current.kind === "photo" ? (
             <Image
               src={current.src}
-              alt={`${label} ${open + 1}`}
+              alt={current.title || `${label} ${open + 1}`}
               width={current.width}
               height={current.height}
               sizes="100vw"
