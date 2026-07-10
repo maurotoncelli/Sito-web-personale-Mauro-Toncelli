@@ -1,0 +1,6 @@
+.pw-browsers
+.next
+node_modules
+scripts
+/tmp
+*.log

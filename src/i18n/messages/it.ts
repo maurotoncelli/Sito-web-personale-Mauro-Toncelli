@@ -1,0 +1,473 @@
+export const it = {
+  meta: {
+    titleDefault: "Mauro Toncelli — Photographer & Videomaker",
+    description:
+      "Fotografo e videomaker freelance tra Neuchâtel e Firenze. Moda, e-commerce, architettura, corporate e matrimoni in tutta Europa.",
+  },
+  brand: {
+    tagline: "Photographer & Videomaker",
+    claim: "Fotografo e videomaker emozionale",
+    locations: "Neuchâtel (CH) · Firenze / Peccioli (IT) · tutta Europa",
+  },
+  nav: {
+    portfolio: "Portfolio",
+    services: "Servizi",
+    journal: "Journal",
+    about: "Su di me",
+    contact: "Contatti",
+  },
+  common: {
+    seeWorks: "Vedi i lavori",
+    discover: "Scopri",
+    seeAllPortfolio: "Vedi tutto nel portfolio",
+    onQuote: "Su preventivo",
+    plusVat: "Prezzi + IVA. Ogni progetto è diverso: il preventivo è sempre su misura.",
+    niches: "Nicchie",
+    emptyGallery: "Gallery in aggiornamento — scrivimi per vedere lavori di questa categoria.",
+    openImage: "Apri immagine",
+    close: "Chiudi",
+    previous: "Precedente",
+    next: "Successiva",
+    previousSlide: "Slide precedente",
+    nextSlide: "Slide successiva",
+    playVideo: "Guarda il video",
+    language: "Lingua",
+  },
+  cta: {
+    title: "Raccontiamo il tuo progetto",
+    subtitle: "Scrivimi cosa hai in mente: rispondo entro 24 ore con una proposta.",
+    button: "Richiedi un preventivo",
+  },
+  home: {
+    heroLabel: "Progetti in evidenza",
+    selectedWorksEyebrow: "Selected works",
+    selectedWorksTitle: "Lavori selezionati",
+    approachQuote: "Dietro ogni immagine c'è ricerca, cura del dettaglio ed emozione.",
+    approachText:
+      "Uno stile geometrico e pulito che converge verso il naturale. Non punto alla quantità: scelgo il lavoro migliore per ogni ambito e lo racconto con attenzione.",
+    approachLink: "Su di me",
+    servicesEyebrow: "Servizi",
+    servicesTitle: "Cosa posso fare per te",
+    videoEyebrow: "In movimento",
+    videoTitle: "Video",
+    videoText:
+      "Brand video, reel e racconti in movimento: una direzione in crescita, dagli stessi occhi della fotografia.",
+    trustEyebrow: "Hanno lavorato con me",
+    droneNotice: "Sei un tecnico o un'impresa? Offro anche",
+    droneNoticeLink: "servizi tecnici con drone",
+    droneNoticeAfter: "— ispezioni, SAL cantiere, rilievi e perizie in Toscana.",
+  },
+  portfolio: {
+    eyebrow: "Portfolio",
+    title: "Lavori selezionati",
+    intro:
+      "Solo lavoro reale: moda, e-commerce, architettura e le altre categorie in cui ho progetti da mostrare. Foto e video nello stesso racconto.",
+    metaDescription:
+      "Lavori selezionati di fotografia e video: moda, e-commerce, architettura, interni, real estate e prodotto.",
+    categories: {
+      moda: { label: "Moda", description: "Editorial, lookbook e campagne per brand del fashion." },
+      "e-commerce": { label: "E-commerce", description: "Still life e on-model per cataloghi e shop online." },
+      "architettura-interni": { label: "Architettura & Interni", description: "Spazi, luce e geometrie: architettura, interior design e hospitality." },
+      "real-estate": { label: "Real Estate", description: "Immobili di pregio, interni ed esterni, foto e video." },
+      "architettura-real-estate": { label: "Architettura & Real Estate", description: "Spazi e immobili raccontati con luce e geometria." },
+      prodotto: { label: "Prodotto", description: "Still life di prodotto in studio, packshot e advertising." },
+      video: { label: "Video", description: "Brand video, reel e contenuti in movimento." },
+      interior: { label: "Interior Design", description: "Cucine, arredi e dettagli d'interni." },
+      hospitality: { label: "Hospitality", description: "Hotel, resort e strutture ricettive." },
+      negozi: { label: "Punti vendita", description: "Store, vetrine e visual merchandising." },
+      corporate: { label: "Corporate", description: "Ritratti professionali e brand image." },
+      food: { label: "Food", description: "Fotografia food per ristoranti e produttori." },
+      eventi: { label: "Eventi", description: "Eventi aziendali e business." },
+      matrimonio: { label: "Matrimonio", description: "Racconto autentico del giorno del sì." },
+      coppia: { label: "Coppia & Engagement", description: "Sessioni di coppia e proposal." },
+      maternita: { label: "Maternità", description: "Ritratti di attesa." },
+    },
+  },
+  services: {
+    eyebrow: "Servizi",
+    title: "Come posso aiutarti",
+    intro:
+      "Sei macro-servizi, una sola promessa: immagini costruite attorno al tuo obiettivo di comunicazione.",
+    metaDescription:
+      "Servizi di fotografia e video: moda, e-commerce, architettura e interni, corporate, matrimoni ed eventi. Tra Neuchâtel e Firenze, in tutta Europa.",
+    fromPrefix: "da",
+    droneTeaserEyebrow: "Per tecnici e imprese",
+    droneTeaserTitle: "Servizi tecnici con drone — ispezioni, SAL cantiere, rilievi e perizie",
+    droneTeaserText: "Toscana, area Firenze–Peccioli. Prezzi chiari, consegna in 48 ore.",
+    detail: {
+      theService: "Il servizio",
+      includes: "Cosa include",
+      investment: "Investimento",
+      fromPortfolio: "Dal portfolio",
+      howIWork: "Come lavoro",
+      otherServices: "Altri servizi",
+      ctaTitle: "Parliamone",
+      ctaSubtitle: "Raccontami il progetto: rispondo entro 24 ore con una proposta su misura.",
+      faqTitle: "Domande frequenti",
+      steps: [
+        { title: "Brief e sopralluogo", text: "Capiamo insieme obiettivo, stile e location." },
+        { title: "Shooting", text: "Set curato nei dettagli, con la luce giusta e zero improvvisazione." },
+        { title: "Selezione e post", text: "Scelgo le immagini migliori e le rifinisco una a una." },
+        { title: "Consegna", text: "File pronti per ogni canale, nei tempi concordati." },
+      ],
+    },
+    items: {
+      moda: {
+        name: "Moda / Editorial",
+        claim: "Immagini che vestono il brand.",
+        description:
+          "Editorial, lookbook e campagne per brand del fashion. Uno stile geometrico e pulito, costruito attorno all'identità del marchio: dalla direzione creativa allo scatto, fino alla post-produzione.",
+        deliverables: [
+          "Concept e moodboard condivisi",
+          "Shooting in studio o location",
+          "Selezione editoriale e post-produzione high-end",
+          "Consegna in formati per stampa, web e social",
+        ],
+        faq: [
+          { q: "Come funziona un progetto di moda o editorial?", a: "Si parte da una consulenza per capire brand, valori e pubblico. Da lì sviluppiamo insieme concept e moodboard, poi shooting e post-produzione high-end. Ogni immagine è costruita attorno all'identità del marchio." },
+          { q: "Lavori con stylist, make-up artist e modelli?", a: "Sì. Collaboro con stylist, MUA e agenzie di modelli di fiducia e posso coordinare l'intero team creativo, oppure integrarmi con il team del brand." },
+          { q: "Shooting in studio o in location?", a: "Entrambi. Lavoro in studio (proprio o a noleggio) e in location: lo scouting fa parte della fase di concept." },
+          { q: "Quante immagini riceviamo e come vengono consegnate?", a: "Il numero di immagini è definito nel preventivo in base all'utilizzo (campagna, lookbook, social). Ogni immagine selezionata è ritoccata singolarmente e consegnata nei formati per stampa, web e social." },
+          { q: "Come funzionano i diritti d'uso delle immagini?", a: "La licenza d'uso viene concordata in fase contrattuale in base ai canali e alla durata di utilizzo (web, social, adv, stampa)." },
+          { q: "Ti sposti per gli shooting?", a: "Sì, lavoro tra Neuchâtel e Firenze e in tutta Europa. Le trasferte si organizzano in anticipo e i costi vengono definiti in modo trasparente nel preventivo." },
+        ],
+      },
+      "e-commerce-prodotto": {
+        name: "E-commerce & Prodotto",
+        claim: "Il tuo catalogo, pronto a vendere.",
+        description:
+          "Still life, packshot e on-model per shop online e cataloghi. Flusso di lavoro ottimizzato per volumi: coerenza visiva su tutto il catalogo, tempi di consegna certi e file pronti per ogni piattaforma.",
+        deliverables: [
+          "Set fotografico dedicato (still life / on-model / ghost)",
+          "Color accuracy e coerenza su tutto il catalogo",
+          "Post-produzione e scontorno inclusi",
+          "Naming file e formati pronti per la piattaforma e-commerce",
+        ],
+        faq: [
+          { q: "A chi è rivolto questo servizio?", a: "Ad aziende e brand che vogliono valorizzare i prodotti online: nuovo e-commerce, aggiornamento catalogo o contenuti per campagne marketing. Sono specializzato nella moda di lusso — abbigliamento, borse, accessori, gioielli e calzature." },
+          { q: "Come viene calcolato il prezzo?", a: "Il preventivo è calcolato per singolo articolo e dipende dal numero di foto/video per prodotto, dalla preparazione necessaria (pulizia, allestimento, styling) e dal livello di post-produzione richiesto." },
+          { q: "Che tipi di scatto offri?", a: "Still life, packshot, ghost (manichino invisibile), on-model, macro di dettaglio e immagini lifestyle che mostrano i prodotti in contesti reali." },
+          { q: "Qual è il flusso di lavoro tipico?", a: "Consulenza, pianificazione, shooting, post-produzione e consegna dei file ottimizzati e nominati per la tua piattaforma. Il tuo feedback è benvenuto in ogni fase." },
+          { q: "Puoi lavorare nel nostro studio o con il nostro team?", a: "Sì. Posso lavorare nel vostro studio, in uno spazio a noleggio o nel mio set, e coordinarmi con team interni o fornitori esterni (sviluppatori, designer, marketing)." },
+          { q: "Quanto tempo serve per completare un progetto?", a: "Dipende dal numero di articoli e dalla complessità dello shooting. Dopo la consulenza iniziale ricevi una stima precisa dei tempi di consegna." },
+          { q: "Realizzi anche video di prodotto?", a: "Sì: brevi video di prodotto e contenuti promozionali per e-commerce e social, integrati nello stesso flusso di lavoro dello shooting fotografico." },
+        ],
+      },
+      "architettura-interni": {
+        name: "Architettura, Interni & Real Estate",
+        claim: "Spazi raccontati con luce e geometria.",
+        description:
+          "Fotografia e video per studi di architettura, interior designer, agenzie immobiliari e strutture ricettive. Interni, esterni e riprese aeree con drone per raccontare gli spazi come meritano.",
+        deliverables: [
+          "Sopralluogo e piano luci naturale",
+          "Foto interni ed esterni + riprese drone",
+          "Video walkthrough su richiesta",
+          "Post-produzione architetturale (linee, prospettive, HDR)",
+        ],
+        faq: [
+          { q: "Dove offri i tuoi servizi?", a: "Lavoro principalmente in Toscana e nel Canton Neuchâtel, con trasferte frequenti a Milano, Roma, Bologna e in Sardegna. Per altre zone concordiamo la trasferta nel preventivo." },
+          { q: "Che tipo di immobili e spazi fotografi?", a: "Appartamenti, case unifamiliari, ville, hotel e strutture ricettive, negozi e spazi commerciali. Ogni progetto è quotato su preventivo, in base a dimensioni, deliverable e livello di post-produzione." },
+          { q: "Quali servizi aggiuntivi offri?", a: "Riprese drone, fotografia serale/notturna, video promozionali per social, virtual tour 360, staging fotografico e render 3D. Ogni extra viene definito nel preventivo." },
+          { q: "Come gestisci luce e post-produzione?", a: "Uso tecniche HDR ed esposizioni multiple, con luce naturale, artificiale o mista a seconda dello spazio. Ogni foto passa da una post-produzione architetturale accurata: linee, prospettive e colori." },
+          { q: "Quanto tempo occorre per la consegna?", a: "Tempi rapidi, generalmente entro pochi giorni: la tempistica esatta dipende dall'entità del progetto e dal livello di post-produzione." },
+          { q: "Posso ottenere condizioni dedicate per più immobili?", a: "Sì: per agenzie e collaborazioni continuative offro condizioni dedicate, ad esempio fotografando più immobili nella stessa giornata." },
+        ],
+      },
+      "corporate-brand": {
+        name: "Corporate & Brand",
+        claim: "L'immagine professionale della tua azienda.",
+        description:
+          "Video promozionali, ritratti professionali e brand image per aziende e professionisti. Contenuti che comunicano identità e valori, dal ritratto headshot al video di brand.",
+        deliverables: [
+          "Ritratti e headshot professionali",
+          "Reportage aziendale e behind the scenes",
+          "Video promo e interviste",
+          "Kit immagini per sito, LinkedIn e stampa",
+        ],
+        faq: [
+          { q: "Cosa comprende un progetto corporate?", a: "Ritratti e headshot, reportage aziendale, behind the scenes, video promo e interviste. Costruiamo insieme un linguaggio visivo coerente con l'identità della tua azienda." },
+          { q: "Come si svolge lo shooting in azienda?", a: "Organizzo la campagna senza interferire con i tuoi impegni: pianifichiamo le giornate, ottimizzo i tempi sul posto e lavoro in autonomia con la mia attrezzatura professionale." },
+          { q: "Quante persone potete fotografare in una giornata?", a: "Dipende dal tipo di ritratto e dal set: in una giornata si possono coprire team anche numerosi, con una postazione dedicata. Lo definiamo in fase di preventivo." },
+          { q: "Le immagini vanno bene per sito, LinkedIn e stampa?", a: "Sì: consegno un kit di immagini ottimizzato per ogni canale — sito web, LinkedIn, social e stampa." },
+          { q: "Come vengono definiti i costi?", a: "Su preventivo, in base a giornate di shooting, numero di persone/location e ai deliverable richiesti. Preventivo trasparente entro 24 ore dalla richiesta." },
+        ],
+      },
+      matrimoni: {
+        name: "Matrimoni",
+        claim: "Il vostro giorno, raccontato con emozione.",
+        description:
+          "Foto e video di matrimonio con uno sguardo autentico ed editoriale. Nessuna posa forzata: racconto ciò che accade, con la cura del dettaglio di chi lavora nella moda. Copertura foto, video o entrambe.",
+        deliverables: [
+          "Incontro conoscitivo e sopralluogo location",
+          "Copertura foto e/o video del giorno",
+          "Selezione, post-produzione e gallery privata online",
+          "Album e stampe fine-art su richiesta",
+        ],
+        pricingNote: "Prezzi validi per matrimoni in Italia. Per la Svizzera: su preventivo.",
+        tiers: {
+          intimate: ["3 ore di copertura", "Solo foto — 120+ immagini ritoccate", "Gallery privata online"],
+          essential: ["6 ore di copertura", "Solo foto — 200+ immagini ritoccate", "Gallery privata online"],
+          signature: ["10 ore, fotografo + videomaker dedicato", "350+ foto ritoccate", "Video highlight 3-5 min + teaser social", "Riprese drone incluse", "Gallery privata online"],
+          grand: ["Giornata intera, team di 4", "500+ foto ritoccate", "Film 15 min + reel e contenuti social", "Riprese drone illimitate", "Gallery privata online"],
+        },
+        faq: [
+          { q: "Come possiamo prenotare?", a: "Contattami via email o telefono per una consulenza senza impegno. Per confermare la data è richiesto un acconto del 50%, con saldo entro il giorno del matrimonio. Prenotare con largo anticipo garantisce la disponibilità." },
+          { q: "Lavori da solo o con un team?", a: "Dipende dal pacchetto: per Intimate ed Essential lavoro da solo; Signature include un videomaker dedicato; Grand prevede un team di 4 per la copertura completa foto e video." },
+          { q: "Quante foto riceveremo?", a: "Dipende dalla copertura scelta: 120+ immagini ritoccate con Intimate, 200+ con Essential, 350+ con Signature e 500+ con Grand. Il numero è sempre indicato nel contratto e ogni foto è ritoccata singolarmente." },
+          { q: "Includi le riprese con il drone?", a: "Sì: il drone è incluso nei pacchetti Signature e Grand, ogni volta che location, meteo e normativa lo consentono. È un modo straordinario per aggiungere prospettive uniche." },
+          { q: "Offri anche il video di matrimonio?", a: "Sì: dal video highlight di 3-5 minuti con teaser social (Signature) fino al film di 15 minuti con reel e contenuti social (Grand). Extra disponibili: prematrimoniale, riprese FPV e documentario esteso." },
+          { q: "Collabori con il nostro wedding planner e i fornitori?", a: "Assolutamente: mi coordino con wedding planner e professionisti che avete scelto, e posso consigliarvi fornitori di fiducia — planner, MUA, catering." },
+          { q: "Ti sposti per i matrimoni?", a: "Sì, fotografo matrimoni in tutta la Toscana, in Italia e all'estero. Per le trasferte ci coordiniamo in anticipo e ogni costo viene definito in modo trasparente." },
+          { q: "Quali sono i tempi di consegna?", a: "I tempi sono concordati nel contratto, per garantire un'accurata fase di editing e post-produzione. La gallery privata online è inclusa in tutti i pacchetti." },
+          { q: "Consegni i file RAW?", a: "È possibile la consegna dei RAW con un costo extra indicato in fase contrattuale." },
+        ],
+      },
+      eventi: {
+        name: "Eventi",
+        claim: "Ogni momento importante, documentato.",
+        description:
+          "Copertura foto e video di eventi aziendali, conferenze, lanci di prodotto e celebrazioni private. Consegna rapida di una selezione per la comunicazione a caldo.",
+        deliverables: [
+          "Copertura foto e/o video dell'evento",
+          "Selezione express entro 48h per social e stampa",
+          "Gallery completa post-prodotta",
+          "Recap video su richiesta",
+        ],
+        faq: [
+          { q: "Che tipo di eventi copri?", a: "Inaugurazioni, presentazioni, eventi aziendali, conferenze, lanci di prodotto, pranzi e cene di lavoro, feste private. Piccoli o grandi: per gli eventi più strutturati lavoro con collaboratori di fiducia." },
+          { q: "Fate anche video oltre alle foto?", a: "Sì: fotoreportage, videoreportage o video dinamici per promuovere l'evento, con montaggio e sound design curati in post-produzione." },
+          { q: "Quando riceviamo il materiale?", a: "Una selezione express entro 48 ore per social e stampa, poi la gallery completa post-prodotta nei tempi concordati." },
+          { q: "Come viene definito il prezzo?", a: "Su preventivo, in base a durata dell'evento, copertura richiesta (foto, video o entrambe) e numero di operatori necessari." },
+        ],
+      },
+    },
+    drone: {
+      eyebrow: "Per tecnici e imprese — B2B",
+      title: "Servizi tecnici con drone in Toscana",
+      metaTitle: "Servizi tecnici con drone in Toscana",
+      metaDescription:
+        "Ispezioni tetti, documentazione SAL cantiere, rilievi aerei e perizie fotografiche con drone. Area Firenze-Peccioli e tutta la Toscana. Licenza A1/A3, prezzi chiari.",
+      intro:
+        "Ispezioni, documentazione di cantiere, rilievi e perizie fotografiche per geometri, periti, imprese e amministratori. Opero con licenza EASA A1/A3 nell'area Firenze–Peccioli e in tutta la Toscana. Prezzi chiari, consegna entro 48 ore.",
+      details: "Dettagli",
+      zonesNote:
+        "Prezzi + IVA, esclusi eventuali permessi obbligatori: la richiesta dei permessi viene quotata a parte. Zone servite: Firenze, Peccioli, Valdera, Pisa e tutta la Toscana su richiesta.",
+      includesTitle: "Cosa comprende",
+      faqTitle: "Domande frequenti",
+      areaNote:
+        "Zone servite: Firenze, Peccioli, Valdera, Pisa e tutta la Toscana su richiesta. Drone DJI registrato, operatore con licenza EASA A1/A3 e copertura assicurativa. Prezzi esclusi eventuali permessi obbligatori: la richiesta dei permessi viene quotata a parte.",
+      backLink: "Servizi tecnici con drone",
+      ctaTitle: "Richiedi un intervento",
+      ctaSubtitle: "Indicami luogo e tipo di lavoro: rispondo in giornata con disponibilità.",
+      items: {
+        ispezioni: {
+          name: "Ispezioni con drone",
+          seoTitle: "Ispezione tetti e coperture con drone in Toscana",
+          price: "€200 a ispezione",
+          description:
+            "Ispezione visiva di tetti, coperture, facciate e strutture difficilmente accessibili, senza ponteggi né cestelli. Immagini ad alta risoluzione per valutare lo stato di conservazione in sicurezza.",
+          deliverables: [
+            "Volo autorizzato con drone DJI (licenza A1/A3)",
+            "Foto ad alta risoluzione delle aree critiche",
+            "Video di sorvolo completo",
+            "Report fotografico ordinato per zona",
+          ],
+          faq: [
+            { q: "Quanto dura un'ispezione?", a: "Mediamente 1-2 ore sul posto, con consegna del materiale entro 48 ore." },
+            { q: "Serve un permesso per volare?", a: "Mi occupo io delle verifiche di volo: opero con licenza A1/A3 e drone registrato, nel rispetto della normativa EASA." },
+          ],
+        },
+        "sal-cantiere": {
+          name: "Documentazione SAL cantiere",
+          seoTitle: "Documentazione fotografica SAL cantiere con drone",
+          price: "€120 a uscita · €400/mese",
+          description:
+            "Documentazione periodica dello stato avanzamento lavori: stesse inquadrature ad ogni uscita per un confronto puntuale nel tempo, utile per direzione lavori, committenza e pratiche.",
+          deliverables: [
+            "Riprese aeree e a terra con punti di vista ripetibili",
+            "Foto datate e georeferenziate",
+            "Archivio ordinato per data e area",
+            "Formula mensile per cantieri lunghi",
+          ],
+          faq: [
+            { q: "Ogni quanto conviene documentare?", a: "Dipende dal cantiere: la formula mensile copre un'uscita ogni 3-4 settimane, la più richiesta per SAL regolari." },
+          ],
+        },
+        rilievi: {
+          name: "Rilievi aerei",
+          seoTitle: "Rilievo aereo di terreni e immobili con drone",
+          price: "€200 a rilievo",
+          description:
+            "Rilievo fotografico aereo di terreni, lotti e immobili: ortofoto e panoramiche per pratiche tecniche, valutazioni immobiliari e progettazione.",
+          deliverables: [
+            "Ortofoto e viste zenitali",
+            "Panoramiche a 360° su richiesta",
+            "File ad alta risoluzione per misurazioni",
+            "Consegna entro 48 ore",
+          ],
+          faq: [
+            { q: "Il rilievo è utilizzabile per pratiche catastali?", a: "Fornisco materiale fotografico di supporto al tecnico incaricato; non sostituisce il rilievo topografico strumentale." },
+          ],
+        },
+        perizie: {
+          name: "Perizie fotografiche danni",
+          seoTitle: "Perizia fotografica danni con drone in Toscana",
+          price: "€200 a intervento",
+          description:
+            "Documentazione fotografica di danni a tetti, strutture e coltivazioni per pratiche assicurative e peritali. Immagini nitide, datate e complete delle aree colpite.",
+          deliverables: [
+            "Sopralluogo e volo documentale",
+            "Foto ad alta risoluzione delle aree danneggiate",
+            "Report fotografico pronto per la pratica",
+            "Tempi rapidi di intervento",
+          ],
+          faq: [
+            { q: "In quanto tempo potete intervenire?", a: "Per urgenze assicurative, in zona Firenze-Peccioli riesco a intervenire in 24-48 ore." },
+          ],
+        },
+      },
+    },
+  },
+  about: {
+    eyebrow: "Su di me",
+    metaDescription:
+      "Mauro Toncelli, fotografo e videomaker emozionale. Moda, e-commerce, architettura e corporate tra Neuchâtel e Firenze, in tutta Europa.",
+    portraitAlt: "Ritratto di Mauro Toncelli",
+    manifesto: [
+      "Creo contenuti visivi originali, costruiti attorno all'obiettivo di comunicazione: dietro ogni immagine c'è ricerca, cura del dettaglio ed emozione.",
+      "Il mio stile è geometrico e pulito, e con il tempo converge verso il naturale. Non punto alla quantità: scelgo il lavoro migliore per ogni ambito e lo racconto con attenzione.",
+      "Lavoro tra Neuchâtel e Firenze, in tutta Europa, con brand del fashion, studi di architettura e realtà corporate.",
+    ],
+    keywords: "Ricerca visiva · Cura del dettaglio · Emozione",
+    whatIDo: "Cosa faccio",
+    ambiti: {
+      moda: "Moda / Editorial",
+      ecommerce: "E-commerce & Prodotto",
+      architettura: "Architettura & Interni",
+      corporate: "Corporate & Brand",
+      matrimoni: "Matrimoni",
+      eventi: "Eventi",
+      drone: "Drone",
+    },
+    brands: "Brand con cui ho lavorato",
+    publications: "Pubblicazioni",
+    publicationsList: [
+      "Off-White — account Instagram ufficiale",
+      "Virgil Abloh — account Instagram ufficiale",
+      "PalmAngels.com",
+      "Slowear.com",
+      "FashionNetwork.com",
+    ],
+    testimonialsTitle: "Dicono di me",
+    testimonials: [
+      { quote: "Lavoro straordinario e foto perfette.", author: "Team Off-White — Shooting in negozio" },
+      {
+        quote:
+          "Attento ai dettagli e molto creativo: ha proposto soluzioni che hanno valorizzato i miei progetti di vetrine per il visual merchandising.",
+        author: "Anna — Luxury Visual Merchandiser Manager",
+      },
+      {
+        quote:
+          "Mauro è fantastico! Supera sempre le aspettative in ogni lavoro che realizza per noi e lo consigliamo a chiunque.",
+        author: "Fabio & Roberto — Segnobianco",
+      },
+      {
+        quote:
+          "Ha fatto molto più del necessario e ha svolto un lavoro fantastico per le nostre foto di fidanzamento. Esperienza 10/10!",
+        author: "J. & A. — Shooting di coppia",
+      },
+    ],
+    whereTitle: "Dove opero",
+    whereText:
+      "Neuchâtel (Svizzera) e Firenze / Peccioli (Italia), con presenza regolare a Zurigo, Milano, Bologna e in Sardegna. Disponibile in tutta Europa.",
+    toolkitTitle: "Toolkit",
+    toolkitText:
+      "Sony A7RV e ottiche GM · drone DJI Mavic 3 (licenza A1/A3) · Adobe, Capture One, DaVinci Resolve.",
+    languagesTitle: "Lingue",
+    languagesText: "Italiano (madrelingua) · Inglese (C1) · Francese (B1)",
+    pathTitle: "Percorso",
+    path: [
+      { label: "Formazione", text: "Accademia Cappiello, Firenze — fotografia e comunicazione visiva." },
+      { label: "Esperienza", text: "E-commerce e window design per Gianni Cuccuini." },
+      { label: "Dal 2021", text: "Freelance per brand luxury, studi di architettura e realtà corporate." },
+      { label: "Oggi — Svizzera", text: "Base a Neuchâtel: collaborazioni in corso con brand luxury svizzeri, tra cui Akris (San Gallo), e clienti tra Svizzera, Italia e tutta Europa." },
+    ],
+    ctaTitle: "Lavoriamo insieme",
+    ctaSubtitle: "Raccontami il tuo progetto: rispondo entro 24 ore.",
+  },
+  contact: {
+    eyebrow: "Contatti",
+    title: "Parliamone",
+    metaDescription:
+      "Richiedi un preventivo per fotografia e video: moda, e-commerce, architettura, matrimoni, eventi e servizi drone. Rispondo entro 24 ore.",
+    intro: "Raccontami il tuo progetto: rispondo entro 24 ore con una proposta o le domande giuste per farla.",
+    emailLabel: "Email",
+    whereLabel: "Dove sono",
+    socialLabel: "Social",
+    form: {
+      name: "Nome",
+      namePlaceholder: "Il tuo nome",
+      service: "Di cosa hai bisogno?",
+      servicePlaceholder: "Seleziona un servizio (opzionale)",
+      droneOption: "Servizi tecnici drone",
+      otherOption: "Altro",
+      message: "Messaggio",
+      messagePlaceholder: "Raccontami il progetto: cosa, dove, quando.",
+      submit: "Invia la richiesta",
+      subjectPrefix: "Richiesta preventivo",
+    },
+  },
+  journal: {
+    eyebrow: "Journal",
+    title: "Note di lavoro",
+    metaDescription: "Dietro le quinte dei progetti, ritratti e note su fotografia e video.",
+    intro: "Dietro le quinte dei progetti, incontri e note su fotografia e video.",
+    all: "Tutti",
+    readArticle: "Leggi l'articolo",
+    back: "Torna al Journal",
+    originalNote: "Questo articolo è disponibile solo in lingua originale.",
+  },
+  cookies: {
+    title: "Cookie e privacy",
+    text: "Questo sito usa cookie tecnici necessari e, solo con il tuo consenso, statistiche anonime (Google Analytics) per capire come viene usato il sito.",
+    acceptAll: "Accetta tutti",
+    reject: "Rifiuta",
+    manage: "Gestisci impostazioni",
+    save: "Salva preferenze",
+    necessaryTitle: "Necessari",
+    necessaryText: "Indispensabili per il funzionamento (tema, lingua, accesso area clienti). Sempre attivi.",
+    statsTitle: "Statistiche",
+    statsText: "Google Analytics 4: dati aggregati e anonimi su visite e pagine più viste.",
+    prefsLink: "Preferenze cookie",
+  },
+  notFound: {
+    title: "Pagina non trovata",
+    text: "Il contenuto che cerchi non esiste più o si è spostato.",
+    button: "Torna alla home",
+  },
+  proof: {
+    eyebrow: "Area clienti",
+    title: "Proof gallery",
+    metaDescription: "Area riservata ai clienti: accedi alla tua gallery con la password ricevuta.",
+    intro: "Inserisci la password che hai ricevuto per vedere la tua gallery privata.",
+    passwordLabel: "Password",
+    submit: "Accedi",
+    error: "Password non valida. Controlla e riprova.",
+    help: "Non hai la password o non funziona? Scrivimi e te la rimando subito.",
+    galleryHint:
+      "Segna le foto con la stellina (preferite), il cuore (mi piace) o la ✕ (da scartare): poi premi \"Invia la selezione\" e mi arriva tutto via email.",
+    photoLabel: "Foto",
+    star: "Preferita",
+    like: "Mi piace",
+    dislike: "Da scartare",
+    noMarks: "Nessuna foto segnata: usa stellina, cuore o ✕ sotto le foto.",
+    sendSelection: "Invia la selezione",
+    emailSubject: "Selezione proof gallery",
+  },
+  footer: {
+    droneLink: "Servizi tecnici con drone",
+    proofLink: "Area clienti — Proof gallery",
+  },
+};
+
+export type Messages = typeof it;

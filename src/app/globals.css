@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #222222;
+  --muted: #757575;
+  --border: #ebebeb;
+  --surface: #f7f7f7;
+}
+
+html[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #f2f2f2;
+  --muted: #9b9b9b;
+  --border: #262626;
+  --surface: #141414;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-mukta);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mukta), sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tipografia allineata al tema attuale (Mukta, titoli uppercase bold) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-mukta), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Titolo verticale (strisce laterali slider, come tema attuale) */
+.vertical-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Contenuto articoli journal (HTML importato da WordPress) */
+.journal-content {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+.journal-content p {
+  margin-block: 1.25rem;
+}
+.journal-content a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.journal-content img {
+  width: 100%;
+  height: auto;
+  margin-block: 2rem;
+}
+.journal-content h2,
+.journal-content h3,
+.journal-content h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.journal-content figure {
+  margin-block: 2rem;
+}
+.journal-content figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+.journal-content blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.25rem;
+  color: var(--muted);
+  margin-block: 1.5rem;
+}
+.journal-content .wp-block-gallery,
+.journal-content .blocks-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.journal-content .wp-block-gallery img,
+.journal-content .blocks-gallery-grid img {
+  margin-block: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Iris loader */
+@keyframes iris-open {
+  from {
+    r: 4%;
+  }
+  to {
+    r: 90%;
+  }
+}
+
+@keyframes iris-fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

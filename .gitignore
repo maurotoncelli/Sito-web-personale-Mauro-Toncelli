@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/.pw-browsers
 
 # next.js
 /.next/
