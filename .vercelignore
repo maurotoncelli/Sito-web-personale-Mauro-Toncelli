@@ -1,6 +1,7 @@
 .pw-browsers
 .next
 node_modules
-scripts
 /tmp
 *.log
+scripts/test-*.mjs
+scripts/migra-a-keystatic.mjs
