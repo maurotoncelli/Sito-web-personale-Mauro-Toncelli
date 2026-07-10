@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1"],
   async redirects() {
     return [
+      // www → dominio principale (canonical unico per SEO)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.maurotoncelli.it" }],
+        destination: "https://maurotoncelli.it/:path*",
+        permanent: true,
+      },
       // Root → lingua di default
       { source: "/", destination: "/it", permanent: false },
 

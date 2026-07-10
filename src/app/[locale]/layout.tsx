@@ -47,6 +47,10 @@ export async function generateMetadata({
       type: "website",
       images: [{ url: "/images/home/DSC7090-copia.jpg", width: 1920, height: 1280, alt: site.name }],
     },
+    // Google Search Console: meta tag di verifica via env (nessun redeploy di codice)
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+      : {}),
   };
 }
 
