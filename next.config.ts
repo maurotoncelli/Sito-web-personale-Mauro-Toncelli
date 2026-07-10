@@ -21,6 +21,9 @@ const legacyServiceRedirects: [string, string][] = [
 ];
 
 const nextConfig: NextConfig = {
+  // Safari a volte apre 127.0.0.1 invece di localhost: senza questo il dev
+  // server blocca i chunk JS e la pagina resta bianca.
+  allowedDevOrigins: ["127.0.0.1"],
   async redirects() {
     return [
       // Root → lingua di default

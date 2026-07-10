@@ -407,6 +407,8 @@ export const fr: Messages = {
     form: {
       name: "Nom",
       namePlaceholder: "Votre nom",
+      email: "Email",
+      emailPlaceholder: "Votre email (pour la réponse)",
       service: "De quoi avez-vous besoin ?",
       servicePlaceholder: "Sélectionnez un service (optionnel)",
       droneOption: "Services techniques drone",
@@ -414,6 +416,9 @@ export const fr: Messages = {
       message: "Message",
       messagePlaceholder: "Parlez-moi du projet : quoi, où, quand.",
       submit: "Envoyer la demande",
+      sending: "Envoi en cours…",
+      success: "Demande envoyée : je réponds sous 24 heures. Merci !",
+      error: "Échec de l'envoi : réessayez dans un instant ou écrivez-moi directement par email.",
       subjectPrefix: "Demande de devis",
     },
   },

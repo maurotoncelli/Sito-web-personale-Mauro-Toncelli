@@ -6,8 +6,8 @@ import type { Messages } from "@/i18n";
 import { trackEvent } from "./Analytics";
 
 /**
- * Form senza backend: compone una mail pronta all'invio (mailto) e traccia
- * la conversione in GA4. Sostituibile con un endpoint serverless in seguito.
+ * Form contatti: invia via /api/contact (SMTP Netsons). Se il backend non è
+ * configurato o fallisce, ripiega sul mailto come prima.
  */
 export function ContactForm({
   form,
@@ -17,19 +17,52 @@ export function ContactForm({
   serviceOptions: string[];
 }) {
   const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
   const [servizio, setServizio] = useState("");
   const [messaggio, setMessaggio] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [stato, setStato] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault();
+    if (stato === "sending") return;
+    setStato("sending");
     trackEvent("contact_form_submit", { service: servizio || "n/a" });
-    const subject = encodeURIComponent(`${form.subjectPrefix}${servizio ? ` — ${servizio}` : ""}`);
-    const body = encodeURIComponent(`${messaggio}\n\n${nome}`);
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, servizio, messaggio, sito: honeypot }),
+      });
+      if (res.ok) {
+        setStato("sent");
+        return;
+      }
+      if (res.status === 503) {
+        // SMTP non configurato: fallback mailto
+        const subject = encodeURIComponent(`${form.subjectPrefix}${servizio ? ` — ${servizio}` : ""}`);
+        const body = encodeURIComponent(`${messaggio}\n\n${nome}\n${email}`);
+        window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
+        setStato("idle");
+        return;
+      }
+      setStato("error");
+    } catch {
+      setStato("error");
+    }
   }
 
   const field =
     "w-full border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-foreground";
+
+  if (stato === "sent") {
+    return (
+      <p className="border border-border bg-surface px-6 py-8 text-center text-[15px]">
+        {form.success}
+      </p>
+    );
+  }
 
   return (
     <form onSubmit={submit} className="space-y-4">
@@ -44,6 +77,31 @@ export function ContactForm({
           onChange={(e) => setNome(e.target.value)}
           className={`mt-2 ${field}`}
           placeholder={form.namePlaceholder}
+        />
+      </div>
+      <div>
+        <label htmlFor="email" className="eyebrow">
+          {form.email}
+        </label>
+        <input
+          id="email"
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={`mt-2 ${field}`}
+          placeholder={form.emailPlaceholder}
+        />
+      </div>
+      {/* honeypot antispam: invisibile agli utenti, i bot lo compilano */}
+      <div className="absolute -left-[9999px]" aria-hidden="true">
+        <label htmlFor="sito">Sito web</label>
+        <input
+          id="sito"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
         />
       </div>
       <div>
@@ -80,11 +138,13 @@ export function ContactForm({
           placeholder={form.messagePlaceholder}
         />
       </div>
+      {stato === "error" && <p className="text-sm text-red-600">{form.error}</p>}
       <button
         type="submit"
-        className="border border-foreground px-8 py-3 text-[13px] font-medium tracking-[0.2em] uppercase transition-colors hover:bg-foreground hover:text-background"
+        disabled={stato === "sending"}
+        className="border border-foreground px-8 py-3 text-[13px] font-medium tracking-[0.2em] uppercase transition-colors hover:bg-foreground hover:text-background disabled:opacity-50"
       >
-        {form.submit}
+        {stato === "sending" ? form.sending : form.submit}
       </button>
     </form>
   );

@@ -407,6 +407,8 @@ export const de: Messages = {
     form: {
       name: "Name",
       namePlaceholder: "Ihr Name",
+      email: "E-Mail",
+      emailPlaceholder: "Ihre E-Mail (für die Antwort)",
       service: "Was brauchen Sie?",
       servicePlaceholder: "Leistung auswählen (optional)",
       droneOption: "Technische Drohnendienste",
@@ -414,6 +416,9 @@ export const de: Messages = {
       message: "Nachricht",
       messagePlaceholder: "Erzählen Sie mir vom Projekt: was, wo, wann.",
       submit: "Anfrage senden",
+      sending: "Wird gesendet…",
+      success: "Anfrage gesendet: Ich antworte innerhalb von 24 Stunden. Danke!",
+      error: "Senden fehlgeschlagen: Bitte versuchen Sie es gleich noch einmal oder schreiben Sie mir direkt per E-Mail.",
       subjectPrefix: "Angebotsanfrage",
     },
   },

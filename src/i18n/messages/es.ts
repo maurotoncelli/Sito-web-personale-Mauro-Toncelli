@@ -407,6 +407,8 @@ export const es: Messages = {
     form: {
       name: "Nombre",
       namePlaceholder: "Tu nombre",
+      email: "Email",
+      emailPlaceholder: "Tu email (para responderte)",
       service: "¿Qué necesitas?",
       servicePlaceholder: "Selecciona un servicio (opcional)",
       droneOption: "Servicios técnicos con dron",
@@ -414,6 +416,9 @@ export const es: Messages = {
       message: "Mensaje",
       messagePlaceholder: "Cuéntame el proyecto: qué, dónde, cuándo.",
       submit: "Enviar la solicitud",
+      sending: "Enviando…",
+      success: "Solicitud enviada: te respondo en 24 horas. ¡Gracias!",
+      error: "No se pudo enviar: inténtalo de nuevo en un momento o escríbeme directamente por email.",
       subjectPrefix: "Solicitud de presupuesto",
     },
   },

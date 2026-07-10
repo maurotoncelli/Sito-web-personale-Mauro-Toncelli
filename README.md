@@ -88,6 +88,35 @@ ads sempre negati, IP anonimizzato); i cookie tecnici (tema, lingua, proof)
 sono sempre attivi. La scelta è salvata in `localStorage` e revocabile dal
 link "Preferenze cookie" nel footer.
 
+## Form contatti (SMTP Netsons)
+
+Il form invia da `/api/contact` tramite la casella Netsons (nodemailer).
+Variabili d'ambiente richieste (Vercel + `.env.local`):
+
+```
+SMTP_HOST=mail.maurotoncelli.it   # server di posta Netsons
+SMTP_PORT=465                     # SSL (587 per STARTTLS)
+SMTP_USER=info@maurotoncelli.it   # casella completa
+SMTP_PASS=********                # password della casella
+```
+
+Il messaggio arriva a `info@maurotoncelli.it` con `Reply-To` del cliente.
+Antispam: campo honeypot invisibile. Finché le env non sono impostate il form
+ripiega sul vecchio mailto (l'endpoint risponde 503).
+
+## Migrazione dominio (Netsons → Vercel)
+
+La mail resta su Netsons: si cambiano **solo** i record A/CNAME del sito,
+**mai i record MX/TXT**. Nel pannello Netsons → dominio → Gestione DNS:
+
+1. Record `A` di `maurotoncelli.it` (host `@`) → `76.76.21.21`
+2. Record `www` → CNAME `cname.vercel-dns.com`
+3. Non toccare MX, TXT/SPF, DKIM (posta) né gli altri record.
+
+Il dominio è già aggiunto su Vercel: quando il DNS propaga, Vercel emette il
+certificato SSL e i 301 dai vecchi URL WordPress entrano in funzione.
+Mantenere l'hosting Netsons attivo per le caselle email.
+
 ## Deploy su Vercel
 
 Importare la cartella `site/` come progetto Vercel (framework: Next.js).

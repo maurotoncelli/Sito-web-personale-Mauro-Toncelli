@@ -407,6 +407,8 @@ export const en: Messages = {
     form: {
       name: "Name",
       namePlaceholder: "Your name",
+      email: "Email",
+      emailPlaceholder: "Your email (so I can reply)",
       service: "What do you need?",
       servicePlaceholder: "Select a service (optional)",
       droneOption: "Technical drone services",
@@ -414,6 +416,9 @@ export const en: Messages = {
       message: "Message",
       messagePlaceholder: "Tell me about the project: what, where, when.",
       submit: "Send request",
+      sending: "Sending…",
+      success: "Request sent: I'll reply within 24 hours. Thank you!",
+      error: "Sending failed: please try again shortly or email me directly.",
       subjectPrefix: "Quote request",
     },
   },

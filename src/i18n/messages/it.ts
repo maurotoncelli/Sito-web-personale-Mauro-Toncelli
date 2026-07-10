@@ -407,6 +407,8 @@ export const it = {
     form: {
       name: "Nome",
       namePlaceholder: "Il tuo nome",
+      email: "Email",
+      emailPlaceholder: "La tua email (per risponderti)",
       service: "Di cosa hai bisogno?",
       servicePlaceholder: "Seleziona un servizio (opzionale)",
       droneOption: "Servizi tecnici drone",
@@ -414,6 +416,9 @@ export const it = {
       message: "Messaggio",
       messagePlaceholder: "Raccontami il progetto: cosa, dove, quando.",
       submit: "Invia la richiesta",
+      sending: "Invio in corso…",
+      success: "Richiesta inviata: ti rispondo entro 24 ore. Grazie!",
+      error: "Invio non riuscito: riprova tra poco o scrivimi direttamente via email.",
       subjectPrefix: "Richiesta preventivo",
     },
   },

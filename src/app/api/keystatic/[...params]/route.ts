@@ -7,6 +7,8 @@ import config from "../../../../../keystatic.config";
  * su Vercel il pannello risponde 503 invece di far fallire la build.
  */
 const configured =
+  // in sviluppo Keystatic serve anche il wizard di creazione della GitHub App
+  process.env.NODE_ENV === "development" ||
   process.env.KEYSTATIC_STORAGE === "local" ||
   Boolean(
     process.env.KEYSTATIC_GITHUB_CLIENT_ID &&
