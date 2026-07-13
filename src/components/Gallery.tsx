@@ -15,10 +15,13 @@ export function Gallery({
   items,
   label,
   common,
+  preview = false,
 }: {
   items: GalleryItem[];
   label: string;
   common: Pick<Messages["common"], "openImage" | "close" | "previous" | "next" | "playVideo">;
+  /** true = griglia compatta uniforme (anteprima nelle pagine servizio), false = masonry piena */
+  preview?: boolean;
 }) {
   const [open, setOpen] = useState<number | null>(null);
 
@@ -46,60 +49,92 @@ export function Gallery({
 
   const current = open !== null ? items[open] : null;
 
+  const card = (item: GalleryItem, i: number) => (
+    <button
+      key={item.src}
+      type="button"
+      onClick={() => {
+        setOpen(i);
+        trackEvent(item.kind === "video" ? "video_play" : "gallery_open", {
+          gallery: label,
+        });
+      }}
+      className={`group block w-full overflow-hidden ${
+        item.kind === "video" ? "cursor-pointer" : "cursor-zoom-in"
+      }`}
+      aria-label={
+        item.kind === "video"
+          ? `${common.playVideo}: ${item.client} — ${item.title}`
+          : `${common.openImage} ${i + 1} / ${items.length}`
+      }
+    >
+      {item.kind === "photo" ? (
+        preview ? (
+          <span className="relative block aspect-[4/3]">
+            <Image
+              src={item.src}
+              alt={item.title || `${label} ${i + 1}`}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </span>
+        ) : (
+          <Image
+            src={item.src}
+            alt={item.title || `${label} ${i + 1}`}
+            width={item.width}
+            height={item.height}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        )
+      ) : (
+        <span
+          className={`relative block ${
+            preview ? "aspect-[4/3]" : item.vertical ? "aspect-[9/16]" : "aspect-video"
+          }`}
+        >
+          <Image
+            src={item.poster}
+            alt={`${item.client} — ${item.title}`}
+            fill
+            sizes={
+              preview
+                ? "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            }
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+          <span className="absolute inset-0 bg-black/15 transition-colors group-hover:bg-black/5" />
+          <span
+            className={`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-black/30 backdrop-blur-sm transition-transform group-hover:scale-110 ${
+              preview ? "h-9 w-9" : "h-12 w-12"
+            }`}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" aria-hidden>
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
+          {!preview && (
+            <span className="absolute bottom-2 left-3 text-[11px] font-medium tracking-[0.15em] uppercase text-white/90">
+              {item.client} — {item.title}
+            </span>
+          )}
+        </span>
+      )}
+    </button>
+  );
+
   return (
     <>
-      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>button]:mb-4">
-        {items.map((item, i) => (
-          <button
-            key={item.src}
-            type="button"
-            onClick={() => {
-              setOpen(i);
-              trackEvent(item.kind === "video" ? "video_play" : "gallery_open", {
-                gallery: label,
-              });
-            }}
-            className={`group block w-full overflow-hidden ${
-              item.kind === "video" ? "cursor-pointer" : "cursor-zoom-in"
-            }`}
-            aria-label={
-              item.kind === "video"
-                ? `${common.playVideo}: ${item.client} — ${item.title}`
-                : `${common.openImage} ${i + 1} / ${items.length}`
-            }
-          >
-            {item.kind === "photo" ? (
-              <Image
-                src={item.src}
-                alt={item.title || `${label} ${i + 1}`}
-                width={item.width}
-                height={item.height}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-            ) : (
-              <span className={`relative block ${item.vertical ? "aspect-[9/16]" : "aspect-video"}`}>
-                <Image
-                  src={item.poster}
-                  alt={`${item.client} — ${item.title}`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-                <span className="absolute inset-0 bg-black/15 transition-colors group-hover:bg-black/5" />
-                <span className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-black/30 backdrop-blur-sm transition-transform group-hover:scale-110">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="white" aria-hidden>
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-                <span className="absolute bottom-2 left-3 text-[11px] font-medium tracking-[0.15em] uppercase text-white/90">
-                  {item.client} — {item.title}
-                </span>
-              </span>
-            )}
-          </button>
-        ))}
-      </div>
+      {preview ? (
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">{items.map(card)}</div>
+      ) : (
+        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>button]:mb-4">
+          {items.map(card)}
+        </div>
+      )}
 
       {current && open !== null && (
         <div

@@ -402,6 +402,9 @@ export const de: Messages = {
       "Fordern Sie ein Angebot für Foto und Video an: Mode, E-Commerce, Architektur, Hochzeiten, Events und Drohnendienste. Antwort innerhalb von 24 Stunden.",
     intro: "Erzählen Sie mir von Ihrem Projekt: Ich antworte innerhalb von 24 Stunden mit einem Vorschlag oder den richtigen Fragen dafür.",
     emailLabel: "E-Mail",
+    whatsappLabel: "WhatsApp",
+    whatsappCta: "Schreiben Sie mir auf WhatsApp",
+    whatsappPrefill: "Hallo Mauro, ich schreibe über die Website: Ich hätte gern ein Angebot für",
     whereLabel: "Wo ich bin",
     socialLabel: "Social",
     form: {

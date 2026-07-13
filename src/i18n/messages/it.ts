@@ -279,7 +279,7 @@ export const it = {
         },
         "sal-cantiere": {
           name: "Documentazione SAL cantiere",
-          seoTitle: "Documentazione fotografica SAL cantiere con drone",
+          seoTitle: "Documentazione SAL cantiere con drone in Toscana",
           price: "€120 a uscita · €400/mese",
           description:
             "Documentazione periodica dello stato avanzamento lavori: stesse inquadrature ad ogni uscita per un confronto puntuale nel tempo, utile per direzione lavori, committenza e pratiche.",
@@ -402,6 +402,9 @@ export const it = {
       "Richiedi un preventivo per fotografia e video: moda, e-commerce, architettura, matrimoni, eventi e servizi drone. Rispondo entro 24 ore.",
     intro: "Raccontami il tuo progetto: rispondo entro 24 ore con una proposta o le domande giuste per farla.",
     emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
+    whatsappCta: "Scrivimi su WhatsApp",
+    whatsappPrefill: "Ciao Mauro, ti scrivo dal sito: vorrei un preventivo per",
     whereLabel: "Dove sono",
     socialLabel: "Social",
     form: {

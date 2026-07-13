@@ -5,7 +5,7 @@ import { droneServiceSlugs, type DroneSlug } from "@/data/services";
 import { site } from "@/data/site";
 import { CtaSection } from "@/components/CtaSection";
 import { getMessages } from "@/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, metaDescription } from "@/lib/seo";
 
 export function generateStaticParams() {
   return droneServiceSlugs.map((sub) => ({ sub }));
@@ -20,7 +20,11 @@ export async function generateMetadata({
   if (!droneServiceSlugs.includes(sub as DroneSlug)) return {};
   const m = getMessages(locale);
   const item = m.services.drone.items[sub as DroneSlug];
-  return { title: item.seoTitle, description: item.description, alternates: pageAlternates(locale, `/servizi/drone/${sub}`) };
+  return {
+    title: item.seoTitle,
+    description: metaDescription(item.description),
+    alternates: pageAlternates(locale, `/servizi/drone/${sub}`),
+  };
 }
 
 export default async function DroneSubPage({

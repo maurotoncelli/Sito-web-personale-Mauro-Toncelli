@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { journalPosts, postBySlug, formatDate } from "@/data/journal";
+import { journalPosts, postBySlug, formatDate, localizedPost, hasTranslation } from "@/data/journal";
 import { getMessages } from "@/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, metaDescription } from "@/lib/seo";
 
 export function generateStaticParams() {
   return journalPosts.map((p) => ({ slug: p.slug }));
@@ -16,9 +16,14 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = postBySlug(slug);
-  if (!post) return {};
-  return { title: post.title, description: post.excerpt, alternates: pageAlternates(locale, `/journal/${post.slug}`) };
+  const found = postBySlug(slug);
+  if (!found) return {};
+  const post = localizedPost(found, locale);
+  return {
+    title: post.title,
+    description: metaDescription(post.excerpt),
+    alternates: pageAlternates(locale, `/journal/${post.slug}`),
+  };
 }
 
 export default async function JournalPostPage({
@@ -27,8 +32,9 @@ export default async function JournalPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const post = postBySlug(slug);
-  if (!post) notFound();
+  const found = postBySlug(slug);
+  if (!found) notFound();
+  const post = localizedPost(found, locale);
   const m = getMessages(locale);
 
   return (
@@ -45,7 +51,7 @@ export default async function JournalPostPage({
           {post.categories.length > 0 && <> — {post.categories.join(", ")}</>}
         </p>
         <h1 className="mt-3 text-3xl leading-tight md:text-4xl">{post.title}</h1>
-        {locale !== "it" && (
+        {!hasTranslation(slug, locale) && (
           <p className="mt-4 border-l-2 border-border pl-3 text-sm italic text-muted">
             {m.journal.originalNote}
           </p>

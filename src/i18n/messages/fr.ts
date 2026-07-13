@@ -402,6 +402,9 @@ export const fr: Messages = {
       "Demandez un devis pour photographie et vidéo : mode, e-commerce, architecture, mariages, événements et services drone. Réponse sous 24 heures.",
     intro: "Parlez-moi de votre projet : je réponds sous 24 heures avec une proposition ou les bonnes questions pour la construire.",
     emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
+    whatsappCta: "Écrivez-moi sur WhatsApp",
+    whatsappPrefill: "Bonjour Mauro, je vous écris depuis le site : j'aimerais un devis pour",
     whereLabel: "Où je suis",
     socialLabel: "Réseaux",
     form: {

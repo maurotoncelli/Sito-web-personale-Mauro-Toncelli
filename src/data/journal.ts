@@ -1,5 +1,9 @@
 import legacyPosts from "./journal.json";
 import cmsPosts from "./journal-cms.json";
+import translationsEn from "./journal-i18n/en.json";
+import translationsDe from "./journal-i18n/de.json";
+import translationsFr from "./journal-i18n/fr.json";
+import translationsEs from "./journal-i18n/es.json";
 
 export type JournalPost = {
   slug: string;
@@ -10,6 +14,29 @@ export type JournalPost = {
   cover: { src: string; width: number; height: number } | null;
   content: string;
 };
+
+type Translation = { title: string; excerpt: string; content: string };
+
+const translations: Record<string, Record<string, Translation>> = {
+  en: translationsEn,
+  de: translationsDe,
+  fr: translationsFr,
+  es: translationsEs,
+};
+
+/**
+ * Post nella lingua richiesta: usa la traduzione se esiste, altrimenti
+ * l'originale (gli articoli nuovi dal CMS restano in originale finché
+ * non vengono tradotti).
+ */
+export function localizedPost(post: JournalPost, locale: string): JournalPost {
+  const t = translations[locale]?.[post.slug];
+  return t ? { ...post, title: t.title, excerpt: t.excerpt, content: t.content } : post;
+}
+
+export function hasTranslation(slug: string, locale: string) {
+  return locale === "it" || Boolean(translations[locale]?.[slug]);
+}
 
 /**
  * Articoli storici (importati da WordPress, journal.json) + nuovi articoli

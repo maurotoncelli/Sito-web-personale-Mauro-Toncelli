@@ -6,6 +6,8 @@ export const site = {
     "Fotografo e videomaker freelance tra Neuchâtel e Firenze. Moda, e-commerce, architettura, corporate e matrimoni in tutta Europa.",
   url: "https://maurotoncelli.it",
   email: "info@maurotoncelli.it",
+  /** Numero WhatsApp in formato internazionale senza spazi */
+  whatsapp: "+393401710284",
   locations: "Neuchâtel (CH) · Firenze / Peccioli (IT) · tutta Europa",
   social: {
     instagram: "https://www.instagram.com/maurotoncelli/",

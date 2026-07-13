@@ -8,6 +8,7 @@ import { heroSlideDefs } from "@/data/home";
 import { services } from "@/data/services";
 import { videos } from "@/data/videos";
 import { mediaGroup, portfolioCategories } from "@/data/portfolio";
+import { site } from "@/data/site";
 import { getMessages } from "@/i18n";
 
 const selectedWorks = ["moda", "e-commerce", "architettura-interni"];
@@ -29,8 +30,30 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       : `/${locale}/portfolio?categoria=${def.filterSlug ?? def.categoria}`,
   }));
 
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.name,
+    jobTitle: site.tagline,
+    url: `${site.url}/${locale}`,
+    email: site.email,
+    sameAs: Object.values(site.social),
+    address: [
+      { "@type": "PostalAddress", addressLocality: "Neuchâtel", addressCountry: "CH" },
+      { "@type": "PostalAddress", addressLocality: "Peccioli", addressRegion: "Toscana", addressCountry: "IT" },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      {/* H1 per SEO/screen reader: la hero è visiva, il titolo di pagina è questo */}
+      <h1 className="sr-only">
+        {site.name} — {m.brand.tagline}. {m.brand.claim}.
+      </h1>
       <HeroSlider
         slides={slides}
         ctaLabel={m.common.seeWorks}

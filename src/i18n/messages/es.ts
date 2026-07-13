@@ -402,6 +402,9 @@ export const es: Messages = {
       "Pide presupuesto para fotografía y vídeo: moda, e-commerce, arquitectura, bodas, eventos y servicios con dron. Respondo en 24 horas.",
     intro: "Cuéntame tu proyecto: respondo en 24 horas con una propuesta o las preguntas adecuadas para construirla.",
     emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
+    whatsappCta: "Escríbeme por WhatsApp",
+    whatsappPrefill: "Hola Mauro, te escribo desde la web: querría un presupuesto para",
     whereLabel: "Dónde estoy",
     socialLabel: "Redes",
     form: {

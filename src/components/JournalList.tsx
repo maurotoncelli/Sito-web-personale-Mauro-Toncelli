@@ -3,11 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { journalPosts, journalCategories, formatDate } from "@/data/journal";
+import { journalPosts, journalCategories, formatDate, localizedPost } from "@/data/journal";
 
 export function JournalList({ locale, allLabel }: { locale: string; allLabel: string }) {
   const [cat, setCat] = useState<string | null>(null);
-  const posts = cat ? journalPosts.filter((p) => p.categories.includes(cat)) : journalPosts;
+  const posts = (cat ? journalPosts.filter((p) => p.categories.includes(cat)) : journalPosts).map(
+    (p) => localizedPost(p, locale)
+  );
 
   const chip = (value: string | null, label: string) => (
     <button

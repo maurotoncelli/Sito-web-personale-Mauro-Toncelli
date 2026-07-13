@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Mukta } from "next/font/google";
-import Script from "next/script";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -56,6 +55,12 @@ export async function generateMetadata({
 
 const themeInit = `(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
 
+// L'iris loader è nell'HTML del server (copre la pagina fin dal primo paint,
+// niente flash). Questo script — eseguito in modo sincrono prima del paint —
+// lo spegne se l'animazione è già stata vista nella sessione o se l'utente
+// preferisce ridurre il movimento.
+const irisInit = `(function(){try{if(sessionStorage.getItem("iris-seen")||window.matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.setAttribute("data-iris","off")}else{sessionStorage.setItem("iris-seen","1")}}catch(e){}})()`;
+
 /** Person + WebSite: entità globali per Google e crawler AI. */
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -101,9 +106,11 @@ export default async function LocaleLayout({
     // prima dell'idratazione, quindi il server non lo conosce (pattern standard)
     <html lang={locale} className={`${mukta.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeInit}
-        </Script>
+        {/* Script inline puri (non next/script): devono eseguire in modo
+            sincrono durante il parse, prima del primo paint. `beforeInteractive`
+            li accoderebbe al runtime Next, che su Safari arriva dopo il paint. */}
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script dangerouslySetInnerHTML={{ __html: irisInit }} />
       </head>
       <body className="min-h-full flex flex-col">
         <script

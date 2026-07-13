@@ -55,8 +55,8 @@ export const services: Service[] = [
   {
     slug: "matrimoni",
     cover: "/images/home/M.C.-Weddings-Castelfalfi-Maurotoncelli11.jpg",
-    galleryKeys: [],
-    portfolioSlugs: [],
+    galleryKeys: ["portfolio/matrimonio"],
+    portfolioSlugs: ["matrimonio"],
     pricing: {
       type: "tiers",
       tiers: [

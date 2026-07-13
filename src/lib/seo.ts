@@ -13,3 +13,10 @@ export function pageAlternates(locale: string, path = "") {
     },
   };
 }
+
+/** Tronca una descrizione alla lunghezza SEO consigliata, a fine parola. */
+export function metaDescription(text: string, max = 158) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
+}

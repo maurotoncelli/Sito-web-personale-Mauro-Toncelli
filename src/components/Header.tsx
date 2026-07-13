@@ -50,13 +50,16 @@ export function Header({
         {/* Logo: due righe, extra bold, come tema attuale */}
         <Link
           href={`/${locale}`}
+          onClick={() => setOpen(false)}
           className="max-w-[7.5em] text-[1.35rem] font-extrabold uppercase leading-[1.05] tracking-[0.01em]"
         >
           {site.name}
         </Link>
 
+        {/* Nav estesa solo da lg (1024px): sotto — incluso iPad portrait a 768px —
+            non c'è spazio per logo + 5 voci + social senza sovrapposizioni */}
         <nav
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 lg:flex"
           aria-label="Principale"
         >
           {items.map((item) => {
@@ -75,13 +78,13 @@ export function Header({
           })}
         </nav>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <SocialIcons />
           <LanguageSwitcher locale={locale} label={languageLabel} />
           <ThemeToggle />
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
           <LanguageSwitcher locale={locale} label={languageLabel} />
           <ThemeToggle />
           <button
@@ -110,13 +113,16 @@ export function Header({
         // containing block che su iOS àncora i `fixed` all'header stesso,
         // facendo collassare il pannello. Altezza esplicita in dvh.
         <nav
-          className="absolute inset-x-0 top-full z-40 flex h-[calc(100dvh-84px)] flex-col gap-2 overflow-y-auto bg-background px-8 py-10 md:hidden"
+          className="absolute inset-x-0 top-full z-40 flex h-[calc(100dvh-84px)] flex-col gap-2 overflow-y-auto bg-background px-8 py-10 md:h-[calc(100dvh-104px)] lg:hidden"
           aria-label="Menu mobile"
         >
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              // Chiusura esplicita: se la voce è la pagina corrente l'URL non
+              // cambia e lo state adjustment sul pathname non scatta mai
+              onClick={() => setOpen(false)}
               className="border-b border-border py-4 text-xl font-semibold tracking-[0.1em] uppercase"
             >
               {item.label}

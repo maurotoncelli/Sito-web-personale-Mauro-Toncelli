@@ -10,7 +10,7 @@ import { Gallery } from "@/components/Gallery";
 import { CtaSection } from "@/components/CtaSection";
 import { site } from "@/data/site";
 import { getMessages } from "@/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, metaDescription } from "@/lib/seo";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -26,7 +26,11 @@ export async function generateMetadata({
   if (!service) return {};
   const m = getMessages(locale);
   const text = m.services.items[slug as keyof typeof m.services.items];
-  return { title: text.name, description: text.description, alternates: pageAlternates(locale, `/servizi/${slug}`) };
+  return {
+    title: text.name,
+    description: metaDescription(text.description),
+    alternates: pageAlternates(locale, `/servizi/${slug}`),
+  };
 }
 
 export default async function ServicePage({
@@ -41,10 +45,19 @@ export default async function ServicePage({
   const text = m.services.items[slug as keyof typeof m.services.items];
   const d = m.services.detail;
 
-  const photos = service.galleryKeys.flatMap((k) => mediaGroup(k)).slice(0, 18);
-  // Gallery mista foto+video (blueprint §5)
-  const gallery = toGalleryItems(photos, videosForCategories(service.portfolioSlugs));
-  const hero = photos[0];
+  // Interleave dei gruppi (round-robin): con più galleryKeys l'anteprima
+  // mostra un mix di tutti i gruppi, non solo il primo.
+  const groups = service.galleryKeys.map((k) => mediaGroup(k));
+  const maxLen = Math.max(0, ...groups.map((g) => g.length));
+  const photos = Array.from({ length: maxLen }, (_, i) =>
+    groups.flatMap((g) => (g[i] ? [g[i]] : []))
+  ).flat();
+  // Gallery mista foto+video (blueprint §5) — anteprima compatta (max 12
+  // elementi, griglia uniforme) per non spezzare la lettura della pagina:
+  // il resto si vede nel portfolio filtrato.
+  const gallery = toGalleryItems(photos, videosForCategories(service.portfolioSlugs)).slice(0, 12);
+  // Hero: la cover esplicita (se definita) vince sulla prima foto della gallery
+  const hero = service.cover ? { src: service.cover } : photos[0];
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   const tierIncludes =
@@ -163,7 +176,7 @@ export default async function ServicePage({
           <div className="mt-16">
             <h2 className="eyebrow">{d.fromPortfolio}</h2>
             <div className="mt-6">
-              <Gallery items={gallery} label={text.name} common={m.common} />
+              <Gallery items={gallery} label={text.name} common={m.common} preview />
             </div>
             {service.portfolioSlugs.length > 0 && (
               <Link

@@ -134,7 +134,13 @@ h6 {
   }
 }
 
-/* Iris loader */
+/* Iris loader: renderizzato dal server, coperto fin dal primo paint.
+   Lo script inline iris-init marca <html data-iris="off"> quando
+   l'animazione non va mostrata (già vista in sessione / reduced motion). */
+html[data-iris="off"] .iris-loader {
+  display: none;
+}
+
 @keyframes iris-open {
   from {
     r: 4%;

@@ -402,6 +402,9 @@ export const en: Messages = {
       "Request a quote for photography and video: fashion, e-commerce, architecture, weddings, events and drone services. I reply within 24 hours.",
     intro: "Tell me about your project: I reply within 24 hours with a proposal or the right questions to build one.",
     emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
+    whatsappCta: "Message me on WhatsApp",
+    whatsappPrefill: "Hi Mauro, I'm writing from your website: I'd like a quote for",
     whereLabel: "Where I am",
     socialLabel: "Social",
     form: {

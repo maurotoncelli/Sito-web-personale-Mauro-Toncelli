@@ -60,7 +60,9 @@ export const videos: VideoItem[] = [
     title: "Beach moments",
     client: "Maitò",
     vertical: true,
-    categoria: "architettura-interni",
+    // reel social di brand per il beach club: sta con corporate & brand,
+    // non con architettura
+    categoria: "corporate",
   },
   {
     src: "/videos/reel-party-prep.mp4",
