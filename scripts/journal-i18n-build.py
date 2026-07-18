@@ -15,7 +15,7 @@ import sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.join(BASE, "src", "data", "journal-i18n")
-LANGS = ["en", "de", "fr", "es"]
+LANGS = ["en", "de", "fr", "es", "zh", "ru", "ar"]
 
 segments = json.load(open(os.path.join(DIR, "segments.json")))
 

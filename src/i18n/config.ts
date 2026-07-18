@@ -1,4 +1,4 @@
-export const locales = ["it", "en", "de", "fr", "es"] as const;
+export const locales = ["it", "en", "de", "fr", "es", "zh", "ru", "ar"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "it";
 
@@ -8,7 +8,15 @@ export const localeLabels: Record<Locale, string> = {
   de: "Deutsch",
   fr: "Français",
   es: "Español",
+  zh: "中文",
+  ru: "Русский",
+  ar: "العربية",
 };
+
+/** Locale con scrittura da destra a sinistra. */
+export function isRtlLocale(locale: string): boolean {
+  return locale === "ar";
+}
 
 export function isLocale(v: string): v is Locale {
   return (locales as readonly string[]).includes(v);

@@ -46,8 +46,24 @@ const nextConfig: NextConfig = {
       { source: "/hello-i-am-mauro-toncelli", destination: "/it/about", permanent: true },
       { source: "/contacts", destination: "/it/contatti", permanent: true },
       { source: "/clients", destination: "/it/proof", permanent: true },
+      // Vecchie gallery clienti WordPress (es. /clients/calzedonia-black/)
+      { source: "/clients/:slug", destination: "/it/proof", permanent: true },
       { source: "/portfolio-archive", destination: "/it/portfolio", permanent: true },
       { source: "/project-type/:slug", destination: "/it/portfolio", permanent: true },
+
+      // Permalink numerici WordPress residui (GSC: ?page_id= / ?attachment_id=)
+      {
+        source: "/",
+        has: [{ type: "query", key: "page_id" }],
+        destination: "/it",
+        permanent: true,
+      },
+      {
+        source: "/",
+        has: [{ type: "query", key: "attachment_id" }],
+        destination: "/it",
+        permanent: true,
+      },
 
       // Vecchi permalink articoli /YYYY/MM/DD/slug → /it/journal/slug
       {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Mukta } from "next/font/google";
+import { Mukta, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_SC } from "next/font/google";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,13 +8,34 @@ import { IrisLoader } from "@/components/IrisLoader";
 import { Analytics } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { site } from "@/data/site";
-import { getMessages, isLocale, locales } from "@/i18n";
+import { getMessages, isLocale, isRtlLocale, locales } from "@/i18n";
 import { pageAlternates } from "@/lib/seo";
 
 const mukta = Mukta({
   variable: "--font-mukta",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+const notoSans = Noto_Sans({
+  variable: "--font-noto",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  display: "swap",
+});
+
+const notoSansSc = Noto_Sans_SC({
+  variable: "--font-noto-sc",
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  variable: "--font-noto-ar",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["arabic"],
   display: "swap",
 });
 
@@ -100,11 +121,20 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const m = getMessages(locale);
+  const dir = isRtlLocale(locale) ? "rtl" : "ltr";
+  const fontVars = [
+    mukta.variable,
+    locale === "ru" ? notoSans.variable : null,
+    locale === "zh" ? notoSansSc.variable : null,
+    locale === "ar" ? notoSansArabic.variable : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     // suppressHydrationWarning: data-theme viene impostato dallo script inline
     // prima dell'idratazione, quindi il server non lo conosce (pattern standard)
-    <html lang={locale} className={`${mukta.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang={locale} dir={dir} className={`${fontVars} h-full antialiased`} suppressHydrationWarning>
       <head>
         {/* Script inline puri (non next/script): devono eseguire in modo
             sincrono durante il parse, prima del primo paint. `beforeInteractive`

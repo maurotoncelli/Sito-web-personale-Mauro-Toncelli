@@ -5,7 +5,7 @@ import sys
 import urllib.request
 
 BASE = "http://localhost:3000"
-LOCALES = ["it", "en", "de", "fr", "es"]
+LOCALES = ["it", "en", "de", "fr", "es", "zh", "ru", "ar"]
 PATHS = [
     "",
     "/portfolio",

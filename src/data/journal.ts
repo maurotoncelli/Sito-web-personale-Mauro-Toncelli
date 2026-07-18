@@ -4,6 +4,9 @@ import translationsEn from "./journal-i18n/en.json";
 import translationsDe from "./journal-i18n/de.json";
 import translationsFr from "./journal-i18n/fr.json";
 import translationsEs from "./journal-i18n/es.json";
+import translationsZh from "./journal-i18n/zh.json";
+import translationsRu from "./journal-i18n/ru.json";
+import translationsAr from "./journal-i18n/ar.json";
 
 export type JournalPost = {
   slug: string;
@@ -22,6 +25,9 @@ const translations: Record<string, Record<string, Translation>> = {
   de: translationsDe,
   fr: translationsFr,
   es: translationsEs,
+  zh: translationsZh,
+  ru: translationsRu,
+  ar: translationsAr,
 };
 
 /**
