@@ -1,3 +1,4 @@
+import { site, siteSameAs } from "@/data/site";
 import { defaultLocale, locales } from "@/i18n/config";
 
 /**
@@ -19,4 +20,48 @@ export function metaDescription(text: string, max = 158) {
   if (text.length <= max) return text;
   const cut = text.slice(0, max);
   return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
+}
+
+/** Nodo LocalBusiness (senza @context) allineato a Google Business Profile. */
+export function localBusinessNode(opts: {
+  url: string;
+  description?: string;
+  name?: string;
+}) {
+  const { business } = site;
+  return {
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": `${site.url}/#localbusiness`,
+    name: opts.name ?? business.name,
+    url: opts.url,
+    image: `${site.url}/images/home/DSC7090-copia.jpg`,
+    email: site.email,
+    telephone: business.telephone,
+    description: opts.description ?? site.description,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: business.address.addressLocality,
+      addressRegion: business.address.addressRegion,
+      postalCode: business.address.postalCode,
+      addressCountry: business.address.addressCountry,
+    },
+    areaServed: business.areaServed.map((name) => ({
+      "@type": "Place",
+      name,
+    })),
+    sameAs: siteSameAs(),
+    priceRange: "€€",
+  };
+}
+
+/** LocalBusiness standalone (pagine drone). */
+export function localBusinessJsonLd(opts: {
+  url: string;
+  description?: string;
+  name?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    ...localBusinessNode(opts),
+  };
 }

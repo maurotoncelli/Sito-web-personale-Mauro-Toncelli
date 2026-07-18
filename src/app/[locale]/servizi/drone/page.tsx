@@ -4,7 +4,7 @@ import { droneServiceSlugs } from "@/data/services";
 import { site } from "@/data/site";
 import { CtaSection } from "@/components/CtaSection";
 import { getMessages } from "@/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { localBusinessJsonLd, pageAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -25,14 +25,11 @@ export default async function DronePage({
   const m = getMessages(locale);
   const drone = m.services.drone;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: `${site.name} — ${drone.title}`,
+  const jsonLd = localBusinessJsonLd({
     url: `${site.url}/${locale}/servizi/drone`,
-    areaServed: "Toscana",
-    address: { "@type": "PostalAddress", addressRegion: "Toscana", addressCountry: "IT" },
-  };
+    name: `${site.business.name} — ${drone.title}`,
+    description: drone.metaDescription,
+  });
 
   return (
     <>

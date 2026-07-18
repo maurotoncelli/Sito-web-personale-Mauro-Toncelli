@@ -42,6 +42,12 @@ export default async function ContattiPage({
           <div>
             <p className="eyebrow">{c.whatsappLabel}</p>
             <a
+              href={`tel:${site.business.telephone}`}
+              className="mt-1 inline-block text-lg hover:underline"
+            >
+              {site.business.telephone.replace(/^\+39/, "+39 ")}
+            </a>
+            <a
               href={`https://wa.me/${site.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(c.whatsappPrefill)}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,6 +61,10 @@ export default async function ContattiPage({
           </div>
           <div>
             <p className="eyebrow">{c.whereLabel}</p>
+            <p className="mt-1 text-muted">
+              {site.business.address.addressLocality} ({site.business.address.postalCode}),{" "}
+              {site.business.address.addressRegion}, {site.business.address.addressCountry}
+            </p>
             <p className="mt-1 text-muted">{m.brand.locations}</p>
           </div>
           <div>

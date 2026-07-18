@@ -7,9 +7,9 @@ import { Footer } from "@/components/Footer";
 import { IrisLoader } from "@/components/IrisLoader";
 import { Analytics } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
-import { site } from "@/data/site";
+import { site, siteSameAs } from "@/data/site";
 import { getMessages, isLocale, isRtlLocale, locales } from "@/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { localBusinessNode, pageAlternates } from "@/lib/seo";
 
 const mukta = Mukta({
   variable: "--font-mukta",
@@ -82,7 +82,7 @@ const themeInit = `(function(){try{var t=localStorage.getItem("theme");if(!t){t=
 // preferisce ridurre il movimento.
 const irisInit = `(function(){try{if(sessionStorage.getItem("iris-seen")||window.matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.setAttribute("data-iris","off")}else{sessionStorage.setItem("iris-seen","1")}}catch(e){}})()`;
 
-/** Person + WebSite: entità globali per Google e crawler AI. */
+/** Person + WebSite + LocalBusiness (GBP Peccioli): entità globali per Google. */
 const personJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -93,10 +93,12 @@ const personJsonLd = {
       jobTitle: "Photographer & Videomaker",
       url: site.url,
       email: site.email,
-      sameAs: Object.values(site.social),
+      telephone: site.business.telephone,
+      sameAs: siteSameAs(),
       workLocation: [
         { "@type": "Place", name: "Neuchâtel, Switzerland" },
-        { "@type": "Place", name: "Florence / Peccioli, Tuscany, Italy" },
+        { "@type": "Place", name: "Peccioli, Tuscany, Italy" },
+        { "@type": "Place", name: "Florence, Tuscany, Italy" },
       ],
       knowsLanguage: ["it", "en", "fr"],
     },
@@ -108,9 +110,12 @@ const personJsonLd = {
       publisher: { "@id": `${site.url}/#person` },
       inLanguage: locales,
     },
+    {
+      ...localBusinessNode({ url: site.url }),
+      founder: { "@id": `${site.url}/#person` },
+    },
   ],
 };
-
 export default async function LocaleLayout({
   children,
   params,

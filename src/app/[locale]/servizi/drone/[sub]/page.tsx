@@ -43,10 +43,18 @@ export default async function DroneSubPage({
     "@type": "Service",
     name: item.seoTitle,
     description: item.description,
-    provider: { "@type": "Person", name: site.name, url: site.url },
-    areaServed: "Toscana",
+    provider: {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${site.url}/#localbusiness`,
+      name: site.business.name,
+      url: site.url,
+      telephone: site.business.telephone,
+    },
+    areaServed: site.business.areaServed.map((name) => ({
+      "@type": "Place",
+      name,
+    })),
   };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
