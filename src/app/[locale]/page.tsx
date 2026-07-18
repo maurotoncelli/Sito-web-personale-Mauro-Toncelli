@@ -10,6 +10,7 @@ import { videos } from "@/data/videos";
 import { mediaGroup, portfolioCategories } from "@/data/portfolio";
 import { site } from "@/data/site";
 import { getMessages } from "@/i18n";
+import { videoObjectsJsonLd } from "@/lib/seo";
 
 const selectedWorks = ["moda", "e-commerce", "architettura-interni"];
 
@@ -30,25 +31,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       : `/${locale}/portfolio?categoria=${def.filterSlug ?? def.categoria}`,
   }));
 
-  const personJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: site.name,
-    jobTitle: site.tagline,
-    url: `${site.url}/${locale}`,
-    email: site.email,
-    sameAs: Object.values(site.social),
-    address: [
-      { "@type": "PostalAddress", addressLocality: "Neuchâtel", addressCountry: "CH" },
-      { "@type": "PostalAddress", addressLocality: "Peccioli", addressRegion: "Toscana", addressCountry: "IT" },
-    ],
-  };
+  const videoJsonLd = videoObjectsJsonLd(videos, locale);
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
       />
       {/* H1 per SEO/screen reader: la hero è visiva, il titolo di pagina è questo */}
       <h1 className="sr-only">

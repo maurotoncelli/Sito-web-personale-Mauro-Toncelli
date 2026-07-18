@@ -5,7 +5,7 @@ import { droneServiceSlugs, type DroneSlug } from "@/data/services";
 import { site } from "@/data/site";
 import { CtaSection } from "@/components/CtaSection";
 import { getMessages } from "@/i18n";
-import { pageAlternates, metaDescription } from "@/lib/seo";
+import { pageAlternates, metaDescription, serviceJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return droneServiceSlugs.map((sub) => ({ sub }));
@@ -38,26 +38,32 @@ export default async function DroneSubPage({
   const drone = m.services.drone;
   const item = drone.items[sub as DroneSlug];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const priceMatch = item.price.match(/€\s*([\d.]+)/);
+  const jsonLd = serviceJsonLd({
     name: item.seoTitle,
     description: item.description,
-    provider: {
-      "@type": ["LocalBusiness", "ProfessionalService"],
-      "@id": `${site.url}/#localbusiness`,
-      name: site.business.name,
-      url: site.url,
-      telephone: site.business.telephone,
-    },
-    areaServed: site.business.areaServed.map((name) => ({
-      "@type": "Place",
-      name,
+    url: `${site.url}/${locale}/servizi/drone/${sub}`,
+    serviceType: item.name,
+    areaServed: site.business.areaServed,
+    pricing: priceMatch
+      ? { type: "from", from: `€${priceMatch[1]}` }
+      : { type: "quote" },
+    fromPrefix: m.services.fromPrefix,
+    onQuoteLabel: m.common.onQuote,
+  });
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: item.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="mx-auto max-w-4xl px-5 py-16 md:px-8">
         <Link
           href={`/${locale}/servizi/drone`}

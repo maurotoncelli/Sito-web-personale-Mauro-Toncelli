@@ -10,7 +10,7 @@ import { Gallery } from "@/components/Gallery";
 import { CtaSection } from "@/components/CtaSection";
 import { site } from "@/data/site";
 import { getMessages } from "@/i18n";
-import { pageAlternates, metaDescription } from "@/lib/seo";
+import { pageAlternates, metaDescription, serviceJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -64,14 +64,16 @@ export default async function ServicePage({
     "tiers" in text ? (text as { tiers: Record<string, string[]> }).tiers : undefined;
   const faq = "faq" in text ? (text as { faq: { q: string; a: string }[] }).faq : undefined;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const jsonLd = serviceJsonLd({
     name: text.name,
     description: text.description,
-    provider: { "@type": "Person", name: site.name, url: site.url },
-    areaServed: ["Svizzera", "Italia", "Europa"],
-  };
+    url: `${site.url}/${locale}/servizi/${slug}`,
+    serviceType: text.name,
+    areaServed: ["Europa", "Italia", "Svizzera", "Toscana"],
+    pricing: service.pricing,
+    fromPrefix: m.services.fromPrefix,
+    onQuoteLabel: m.common.onQuote,
+  });
 
   /** FAQPage: idoneo ai rich result Google e leggibile dai crawler AI. */
   const faqJsonLd = faq
