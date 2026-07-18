@@ -40,9 +40,7 @@ export function localBusinessNode(opts: {
     description: opts.description ?? site.description,
     address: {
       "@type": "PostalAddress",
-      addressLocality: business.address.addressLocality,
       addressRegion: business.address.addressRegion,
-      postalCode: business.address.postalCode,
       addressCountry: business.address.addressCountry,
     },
     areaServed: business.areaServed.map((name) => ({

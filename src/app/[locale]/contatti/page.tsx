@@ -61,10 +61,6 @@ export default async function ContattiPage({
           </div>
           <div>
             <p className="eyebrow">{c.whereLabel}</p>
-            <p className="mt-1 text-muted">
-              {site.business.address.addressLocality} ({site.business.address.postalCode}),{" "}
-              {site.business.address.addressRegion}, {site.business.address.addressCountry}
-            </p>
             <p className="mt-1 text-muted">{m.brand.locations}</p>
           </div>
           <div>

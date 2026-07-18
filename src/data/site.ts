@@ -16,19 +16,17 @@ export const site = {
     facebook: "https://www.facebook.com/Maurotoncelliphotography/",
   },
   /**
-   * NAP allineato a Google Business Profile (Peccioli).
-   * `googleMapsUrl`: incolla il link "Condividi" della scheda Maps quando disponibile.
+   * Dati LocalBusiness (senza indirizzo di casa sul sito).
+   * Zona vaga: Toscana / area Firenze–Peccioli. `googleMapsUrl` = link Condividi Maps.
    */
   business: {
     name: "Mauro Toncelli Photographer & Videomaker",
     telephone: "+393401710284",
     address: {
-      addressLocality: "Peccioli",
       addressRegion: "Toscana",
-      postalCode: "56037",
       addressCountry: "IT",
     },
-    areaServed: ["Toscana", "Peccioli", "Firenze", "Valdera", "Pisa"],
+    areaServed: ["Toscana", "Firenze", "Peccioli", "Valdera", "Pisa"],
     googleMapsUrl: "",
   },
 };
