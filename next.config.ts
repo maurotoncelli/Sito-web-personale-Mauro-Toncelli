@@ -33,8 +33,7 @@ const nextConfig: NextConfig = {
         destination: "https://maurotoncelli.it/:path*",
         permanent: true,
       },
-      // Root → lingua di default
-      { source: "/", destination: "/it", permanent: false },
+      // Root `/` → /it e query WP (?page_id= / ?attachment_id=): src/middleware.ts
 
       // Vecchi URL WordPress → nuove pagine IT
       { source: "/studio_servizi", destination: "/it/servizi", permanent: true },
@@ -50,20 +49,6 @@ const nextConfig: NextConfig = {
       { source: "/clients/:slug", destination: "/it/proof", permanent: true },
       { source: "/portfolio-archive", destination: "/it/portfolio", permanent: true },
       { source: "/project-type/:slug", destination: "/it/portfolio", permanent: true },
-
-      // Permalink numerici WordPress residui (GSC: ?page_id= / ?attachment_id=)
-      {
-        source: "/",
-        has: [{ type: "query", key: "page_id" }],
-        destination: "/it",
-        permanent: true,
-      },
-      {
-        source: "/",
-        has: [{ type: "query", key: "attachment_id" }],
-        destination: "/it",
-        permanent: true,
-      },
 
       // Vecchi permalink articoli /YYYY/MM/DD/slug → /it/journal/slug
       {
