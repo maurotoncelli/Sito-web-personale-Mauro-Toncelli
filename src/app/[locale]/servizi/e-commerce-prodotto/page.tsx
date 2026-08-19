@@ -23,7 +23,9 @@ const SLUG = "e-commerce-prodotto";
 
 /** Immagini chiave della landing (dai nuovi scatti Akris/Versace). */
 const IMG = {
-  heroFront: "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-fronte.jpg",
+  // Scatto pubblicitario (sneakers Versace su fondo sfumato): riempie il
+  // riquadro hero a tutta area, senza vuoti.
+  hero: "/images/portfolio/e-commerce/ecommerce-sneakers-argento.jpg",
   colorFront: "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-fronte.jpg",
   colorBack: "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-retro.jpg",
   detailFull: "/images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-fronte.jpg",
@@ -48,7 +50,7 @@ export async function generateMetadata({
     openGraph: {
       title: text.name,
       description: metaDescription(text.description),
-      images: [{ url: IMG.heroFront, width: 768, height: 1024, alt: text.name }],
+      images: [{ url: IMG.hero, width: 1024, height: 1024, alt: text.name }],
     },
   };
 }
@@ -128,12 +130,12 @@ export default async function EcommerceLandingPage({
           </div>
           <div className="relative min-h-[360px] bg-surface md:min-h-[560px]">
             <Image
-              src={IMG.heroFront}
+              src={IMG.hero}
               alt={text.name}
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain p-6 md:p-12"
+              className="object-cover"
             />
           </div>
         </div>
