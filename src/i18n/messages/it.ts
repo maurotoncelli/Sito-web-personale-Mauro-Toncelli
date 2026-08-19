@@ -94,6 +94,38 @@ export const it = {
     droneTeaserEyebrow: "Per tecnici e imprese",
     droneTeaserTitle: "Servizi tecnici con drone — ispezioni, SAL cantiere, rilievi e perizie",
     droneTeaserText: "Toscana, area Firenze–Peccioli. Prezzi chiari, consegna in 48 ore.",
+    ecommerceLanding: {
+      heroText:
+        "Still life, packshot e on-model per shop online e cataloghi di moda luxury. Colore fedele, dettaglio estremo e file pronti per ogni piattaforma.",
+      heroCta: "Richiedi un preventivo",
+      heroSecondary: "Guarda i lavori",
+      stickyCta: "Richiedi un preventivo",
+      valueProps: [
+        { title: "Fedeltà cromatica", text: "Colore calibrato e verificato: online il cliente vede esattamente il prodotto reale." },
+        { title: "Dettaglio 61 megapixel", text: "Sensore full-frame ad altissima risoluzione: trame e materiali nitidi a ogni zoom." },
+        { title: "Coerenza sul catalogo", text: "Stessa luce, stesso taglio, stesso stile su centinaia di articoli." },
+        { title: "Pronto a pubblicare", text: "Scontorno, formati e naming file ottimizzati per la tua piattaforma." },
+      ],
+      colorEyebrow: "Fedeltà cromatica",
+      colorTitle: "Il colore che vendi è il colore che consegni",
+      colorText:
+        "Ogni scatto nasce su monitor calibrato e viene sviluppato in Capture One e Lightroom Classic con profili colore controllati. Il rosa che il cliente vede sullo shop è lo stesso del capo che riceve a casa: meno resi, più fiducia nel brand.",
+      colorCaption: "Stesso capo, fronte e retro: colore identico, senza derive.",
+      detailEyebrow: "Alta definizione",
+      detailTitle: "61 milioni di pixel di dettaglio",
+      detailText:
+        "Scatto con sensore full-frame da 61 megapixel: i tuoi clienti possono zoomare sul tessuto e leggere la qualità del prodotto. File pronti anche per stampe catalogo di grande formato.",
+      detailBadge: "Dettaglio 100%",
+      detailCaption: "Crop reale al 100%: trama, cuciture e riflessi restano nitidi.",
+      studioEyebrow: "In studio",
+      studioTitle: "Un set dedicato, curato scatto per scatto",
+      studioText:
+        "Lavoro nel mio set o nel tuo, con luce costruita su misura per ogni materiale. Nessuna improvvisazione: allestimento, styling e post-produzione seguono lo stesso standard su tutto il catalogo.",
+      studioImageAlt: "Mauro Toncelli in studio durante uno shooting e-commerce",
+      galleryTitle: "Lavori selezionati",
+      midCtaTitle: "Pronto a far vendere il tuo catalogo?",
+      midCtaText: "Raccontami quanti articoli hai e come li usi: ti mando un preventivo su misura entro 24 ore.",
+    },
     detail: {
       theService: "Il servizio",
       includes: "Cosa include",

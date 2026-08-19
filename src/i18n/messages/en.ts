@@ -95,6 +95,38 @@ export const en: Messages = {
     droneTeaserEyebrow: "For surveyors and companies",
     droneTeaserTitle: "Technical drone services — inspections, construction progress, surveys and damage reports",
     droneTeaserText: "Tuscany, Florence–Peccioli area. Clear prices, 48-hour delivery.",
+    ecommerceLanding: {
+      heroText:
+        "Still life, packshot and on-model for online shops and luxury fashion catalogues. True colour, extreme detail and files ready for every platform.",
+      heroCta: "Request a quote",
+      heroSecondary: "See the work",
+      stickyCta: "Request a quote",
+      valueProps: [
+        { title: "Colour accuracy", text: "Calibrated, verified colour: online your customer sees exactly the real product." },
+        { title: "61-megapixel detail", text: "High-resolution full-frame sensor: textures and materials stay sharp at any zoom." },
+        { title: "Catalogue consistency", text: "Same light, same crop, same style across hundreds of items." },
+        { title: "Ready to publish", text: "Clipping, formats and file naming optimised for your platform." },
+      ],
+      colorEyebrow: "Colour accuracy",
+      colorTitle: "The colour you sell is the colour you deliver",
+      colorText:
+        "Every shot is taken on a calibrated monitor and developed in Capture One and Lightroom Classic with controlled colour profiles. The pink the customer sees on the shop is the same as the garment they receive at home: fewer returns, more trust in the brand.",
+      colorCaption: "Same garment, front and back: identical colour, no drift.",
+      detailEyebrow: "High definition",
+      detailTitle: "61 million pixels of detail",
+      detailText:
+        "I shoot with a 61-megapixel full-frame sensor: your customers can zoom into the fabric and read the quality of the product. Files are also ready for large-format catalogue printing.",
+      detailBadge: "100% detail",
+      detailCaption: "Real 100% crop: weave, stitching and highlights stay sharp.",
+      studioEyebrow: "In the studio",
+      studioTitle: "A dedicated set, crafted shot by shot",
+      studioText:
+        "I work in my set or in yours, with light built to measure for every material. No improvisation: styling, set-up and post-production follow the same standard across the whole catalogue.",
+      studioImageAlt: "Mauro Toncelli in the studio during an e-commerce shoot",
+      galleryTitle: "Selected work",
+      midCtaTitle: "Ready to make your catalogue sell?",
+      midCtaText: "Tell me how many items you have and how you use them: I'll send a tailored quote within 24 hours.",
+    },
     detail: {
       theService: "The service",
       includes: "What's included",

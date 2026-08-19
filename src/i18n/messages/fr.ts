@@ -95,6 +95,38 @@ export const fr: Messages = {
     droneTeaserEyebrow: "Pour techniciens et entreprises",
     droneTeaserTitle: "Services techniques par drone — inspections, suivi de chantier, relevés et expertises",
     droneTeaserText: "Toscane, zone Florence–Peccioli. Prix clairs, livraison en 48 heures.",
+    ecommerceLanding: {
+      heroText:
+        "Still life, packshot et on-model pour boutiques en ligne et catalogues de mode luxe. Couleur fidèle, détail extrême et fichiers prêts pour chaque plateforme.",
+      heroCta: "Demander un devis",
+      heroSecondary: "Voir les travaux",
+      stickyCta: "Demander un devis",
+      valueProps: [
+        { title: "Fidélité des couleurs", text: "Couleur calibrée et vérifiée : en ligne, le client voit exactement le produit réel." },
+        { title: "Détail 61 mégapixels", text: "Capteur plein format haute résolution : matières et textures restent nettes à chaque zoom." },
+        { title: "Cohérence du catalogue", text: "Même lumière, même cadrage, même style sur des centaines d'articles." },
+        { title: "Prêt à publier", text: "Détourage, formats et nommage des fichiers optimisés pour votre plateforme." },
+      ],
+      colorEyebrow: "Fidélité des couleurs",
+      colorTitle: "La couleur que vous vendez est la couleur que vous livrez",
+      colorText:
+        "Chaque prise de vue est réalisée sur écran calibré et développée dans Capture One et Lightroom Classic avec des profils colorimétriques contrôlés. Le rose que le client voit sur la boutique est le même que celui du vêtement qu'il reçoit chez lui : moins de retours, plus de confiance dans la marque.",
+      colorCaption: "Même vêtement, recto et verso : couleur identique, sans dérive.",
+      detailEyebrow: "Haute définition",
+      detailTitle: "61 millions de pixels de détail",
+      detailText:
+        "Je photographie avec un capteur plein format de 61 mégapixels : vos clients peuvent zoomer sur le tissu et percevoir la qualité du produit. Les fichiers sont aussi prêts pour l'impression catalogue grand format.",
+      detailBadge: "Détail 100 %",
+      detailCaption: "Recadrage réel à 100 % : trame, coutures et reflets restent nets.",
+      studioEyebrow: "En studio",
+      studioTitle: "Un set dédié, soigné prise après prise",
+      studioText:
+        "Je travaille dans mon set ou dans le vôtre, avec une lumière construite sur mesure pour chaque matière. Aucune improvisation : installation, stylisme et post-production suivent le même standard sur tout le catalogue.",
+      studioImageAlt: "Mauro Toncelli en studio pendant un shooting e-commerce",
+      galleryTitle: "Travaux sélectionnés",
+      midCtaTitle: "Prêt à faire vendre votre catalogue ?",
+      midCtaText: "Dites-moi combien d'articles vous avez et comment vous les utilisez : je vous envoie un devis sur mesure sous 24 heures.",
+    },
     detail: {
       theService: "Le service",
       includes: "Ce qui est inclus",

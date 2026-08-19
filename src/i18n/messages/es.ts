@@ -95,6 +95,38 @@ export const es: Messages = {
     droneTeaserEyebrow: "Para técnicos y empresas",
     droneTeaserTitle: "Servicios técnicos con dron — inspecciones, seguimiento de obra, levantamientos y peritajes",
     droneTeaserText: "Toscana, zona Florencia–Peccioli. Precios claros, entrega en 48 horas.",
+    ecommerceLanding: {
+      heroText:
+        "Still life, packshot y on-model para tiendas online y catálogos de moda de lujo. Color fiel, detalle extremo y archivos listos para cada plataforma.",
+      heroCta: "Solicita un presupuesto",
+      heroSecondary: "Ver los trabajos",
+      stickyCta: "Solicita un presupuesto",
+      valueProps: [
+        { title: "Fidelidad cromática", text: "Color calibrado y verificado: online el cliente ve exactamente el producto real." },
+        { title: "Detalle de 61 megapíxeles", text: "Sensor full-frame de alta resolución: texturas y materiales nítidos en cualquier zoom." },
+        { title: "Coherencia en el catálogo", text: "Misma luz, mismo encuadre, mismo estilo en cientos de artículos." },
+        { title: "Listo para publicar", text: "Recorte, formatos y nombres de archivo optimizados para tu plataforma." },
+      ],
+      colorEyebrow: "Fidelidad cromática",
+      colorTitle: "El color que vendes es el color que entregas",
+      colorText:
+        "Cada toma se realiza en un monitor calibrado y se revela en Capture One y Lightroom Classic con perfiles de color controlados. El rosa que el cliente ve en la tienda es el mismo de la prenda que recibe en casa: menos devoluciones, más confianza en la marca.",
+      colorCaption: "Misma prenda, delante y detrás: color idéntico, sin desviaciones.",
+      detailEyebrow: "Alta definición",
+      detailTitle: "61 millones de píxeles de detalle",
+      detailText:
+        "Fotografío con un sensor full-frame de 61 megapíxeles: tus clientes pueden ampliar el tejido y percibir la calidad del producto. Los archivos también están listos para impresión de catálogo en gran formato.",
+      detailBadge: "Detalle 100 %",
+      detailCaption: "Recorte real al 100 %: trama, costuras y reflejos siguen nítidos.",
+      studioEyebrow: "En estudio",
+      studioTitle: "Un set dedicado, cuidado toma a toma",
+      studioText:
+        "Trabajo en mi set o en el tuyo, con luz construida a medida para cada material. Sin improvisación: montaje, estilismo y posproducción siguen el mismo estándar en todo el catálogo.",
+      studioImageAlt: "Mauro Toncelli en el estudio durante una sesión de e-commerce",
+      galleryTitle: "Trabajos seleccionados",
+      midCtaTitle: "¿Listo para que tu catálogo venda?",
+      midCtaText: "Cuéntame cuántos artículos tienes y cómo los usas: te envío un presupuesto a medida en 24 horas.",
+    },
     detail: {
       theService: "El servicio",
       includes: "Qué incluye",

@@ -1,5 +1,31 @@
 gruppo: e-commerce
 foto:
+  - immagine: /images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-fronte.jpg
+    titolo: "Camicia in seta - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-retro.jpg
+    titolo: "Camicia in seta, retro - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-fronte.jpg
+    titolo: "Blazer stampa geometrica - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-retro.jpg
+    titolo: "Blazer stampa geometrica, retro - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-blazer-dettaglio-manica.jpg
+    titolo: "Blazer, dettaglio manica - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-abito-velluto-floreale.jpg
+    titolo: "Abito in velluto floreale - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-cappotto-avorio.jpg
+    titolo: "Cappotto avorio - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-mantella-arancio.jpg
+    titolo: "Mantella in lana - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-pantaloni-stampa-geometrica.jpg
+    titolo: "Pantaloni stampa geometrica - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-borsa-akris-intreccio.jpg
+    titolo: "Borsa Ai in intreccio - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-cintura-pelle.jpg
+    titolo: "Cintura in pelle - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-cintura-dettaglio-fibbia.jpg
+    titolo: "Cintura, dettaglio fibbia - Akris"
+  - immagine: /images/portfolio/e-commerce/ecommerce-sneakers-argento.jpg
+    titolo: "Sneakers Chain Reaction - Versace"
   - immagine: /images/portfolio/e-commerce/815834-2048x.jpg-copia-copia-scaled-e1729706764474.jpg
     titolo: ""
   - immagine: /images/portfolio/e-commerce/Ecommerce-Accessories10.jpg

@@ -586,6 +586,84 @@
  ],
  "portfolio/e-commerce": [
   {
+   "src": "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-fronte.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Camicia in seta - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-retro.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Camicia in seta, retro - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-fronte.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Blazer stampa geometrica - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-retro.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Blazer stampa geometrica, retro - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-blazer-dettaglio-manica.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Blazer, dettaglio manica - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-abito-velluto-floreale.jpg",
+   "width": 767,
+   "height": 1024,
+   "title": "Abito in velluto floreale - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-cappotto-avorio.jpg",
+   "width": 767,
+   "height": 1024,
+   "title": "Cappotto avorio - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-mantella-arancio.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Mantella in lana - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-pantaloni-stampa-geometrica.jpg",
+   "width": 767,
+   "height": 1024,
+   "title": "Pantaloni stampa geometrica - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-borsa-akris-intreccio.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Borsa Ai in intreccio - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-cintura-pelle.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Cintura in pelle - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-cintura-dettaglio-fibbia.jpg",
+   "width": 768,
+   "height": 1024,
+   "title": "Cintura, dettaglio fibbia - Akris"
+  },
+  {
+   "src": "/images/portfolio/e-commerce/ecommerce-sneakers-argento.jpg",
+   "width": 1024,
+   "height": 1024,
+   "title": "Sneakers Chain Reaction - Versace"
+  },
+  {
    "src": "/images/portfolio/e-commerce/815834-2048x.jpg-copia-copia-scaled-e1729706764474.jpg",
    "width": 2400,
    "height": 1052

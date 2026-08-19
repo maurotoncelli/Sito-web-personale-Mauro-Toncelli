@@ -13,7 +13,10 @@ import { getMessages } from "@/i18n";
 import { pageAlternates, metaDescription, serviceJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  // e-commerce-prodotto ha una landing dedicata (route statica omonima che
+  // vince su questa dinamica): la escludiamo per non generare due volte lo
+  // stesso path.
+  return services.filter((s) => s.slug !== "e-commerce-prodotto").map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({

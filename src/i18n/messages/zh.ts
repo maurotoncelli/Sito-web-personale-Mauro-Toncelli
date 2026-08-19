@@ -95,6 +95,38 @@ export const zh: Messages = {
     droneTeaserEyebrow: "面向测量师与企业",
     droneTeaserTitle: "技术无人机服务——巡检、施工进度、测绘与损坏报告",
     droneTeaserText: "托斯卡纳，佛罗伦萨–佩乔利地区。价格清晰，48小时交付。",
+    ecommerceLanding: {
+      heroText:
+        "为线上商店和奢侈时尚目录拍摄静物、平铺与真人上身。色彩真实、细节极致，文件可直接用于各类平台。",
+      heroCta: "获取报价",
+      heroSecondary: "查看作品",
+      stickyCta: "获取报价",
+      valueProps: [
+        { title: "色彩还原", text: "经过校准并核验的色彩：顾客在线看到的正是真实产品。" },
+        { title: "6100万像素细节", text: "高分辨率全画幅传感器：任意放大，纹理与材质依然锐利。" },
+        { title: "目录一致性", text: "数百件商品保持同样的光线、构图与风格。" },
+        { title: "即可发布", text: "抠图、格式与文件命名均按你的平台优化。" },
+      ],
+      colorEyebrow: "色彩还原",
+      colorTitle: "你所售即你所交付的颜色",
+      colorText:
+        "每一张照片都在校准显示器上拍摄，并在 Capture One 与 Lightroom Classic 中以受控色彩配置文件进行处理。顾客在商店看到的粉色，与他们收到的服装完全一致：更少退货，更多品牌信任。",
+      colorCaption: "同一件服装，正面与背面：色彩一致，毫无偏差。",
+      detailEyebrow: "高清细节",
+      detailTitle: "6100万像素的细节",
+      detailText:
+        "我使用6100万像素全画幅传感器拍摄：顾客可以放大面料，读出产品的品质。文件同样适用于大幅面目录印刷。",
+      detailBadge: "100% 细节",
+      detailCaption: "真实100%裁切：织纹、缝线与光泽依旧清晰。",
+      studioEyebrow: "在工作室",
+      studioTitle: "专属拍摄场景，逐张精心打磨",
+      studioText:
+        "我在自己的或你的场地工作，为每种材质量身打造光线。绝不即兴发挥：布置、造型与后期在整个目录中遵循同一标准。",
+      studioImageAlt: "Mauro Toncelli 在工作室进行电商拍摄",
+      galleryTitle: "精选作品",
+      midCtaTitle: "准备好让你的目录带来销量了吗？",
+      midCtaText: "告诉我你有多少商品以及如何使用：我会在24小时内发送量身定制的报价。",
+    },
     detail: {
       theService: "服务内容",
       includes: "包含内容",

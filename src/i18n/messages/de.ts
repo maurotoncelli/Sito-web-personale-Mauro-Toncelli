@@ -95,6 +95,38 @@ export const de: Messages = {
     droneTeaserEyebrow: "Für Techniker und Unternehmen",
     droneTeaserTitle: "Technische Drohnendienste — Inspektionen, Baufortschritt, Vermessungen und Gutachten",
     droneTeaserText: "Toskana, Raum Florenz–Peccioli. Klare Preise, Lieferung in 48 Stunden.",
+    ecommerceLanding: {
+      heroText:
+        "Still life, Packshot und On-Model für Online-Shops und Luxus-Modekataloge. Farbtreu, extrem detailreich und Dateien bereit für jede Plattform.",
+      heroCta: "Angebot anfordern",
+      heroSecondary: "Arbeiten ansehen",
+      stickyCta: "Angebot anfordern",
+      valueProps: [
+        { title: "Farbtreue", text: "Kalibrierte, geprüfte Farbe: online sieht die Kundin genau das echte Produkt." },
+        { title: "61-Megapixel-Detail", text: "Hochauflösender Vollformatsensor: Texturen und Materialien bleiben bei jedem Zoom scharf." },
+        { title: "Konsistenz im Katalog", text: "Gleiches Licht, gleicher Schnitt, gleicher Stil über Hunderte von Artikeln." },
+        { title: "Bereit zur Veröffentlichung", text: "Freisteller, Formate und Dateibenennung optimiert für deine Plattform." },
+      ],
+      colorEyebrow: "Farbtreue",
+      colorTitle: "Die Farbe, die du verkaufst, ist die Farbe, die du lieferst",
+      colorText:
+        "Jede Aufnahme entsteht auf einem kalibrierten Monitor und wird in Capture One und Lightroom Classic mit kontrollierten Farbprofilen entwickelt. Das Pink, das die Kundin im Shop sieht, ist dasselbe wie beim Kleidungsstück, das sie zu Hause erhält: weniger Retouren, mehr Vertrauen in die Marke.",
+      colorCaption: "Gleiches Kleidungsstück, vorne und hinten: identische Farbe, keine Abweichung.",
+      detailEyebrow: "Hohe Auflösung",
+      detailTitle: "61 Millionen Pixel an Detail",
+      detailText:
+        "Ich fotografiere mit einem 61-Megapixel-Vollformatsensor: Deine Kundinnen können in den Stoff zoomen und die Qualität des Produkts erkennen. Die Dateien eignen sich auch für großformatige Katalogdrucke.",
+      detailBadge: "100 % Detail",
+      detailCaption: "Echter 100-%-Ausschnitt: Gewebe, Nähte und Reflexe bleiben scharf.",
+      studioEyebrow: "Im Studio",
+      studioTitle: "Ein eigenes Set, Aufnahme für Aufnahme sorgfältig gestaltet",
+      studioText:
+        "Ich arbeite in meinem oder in deinem Set, mit Licht, das für jedes Material maßgeschneidert ist. Keine Improvisation: Aufbau, Styling und Postproduktion folgen im gesamten Katalog demselben Standard.",
+      studioImageAlt: "Mauro Toncelli im Studio während eines E-Commerce-Shootings",
+      galleryTitle: "Ausgewählte Arbeiten",
+      midCtaTitle: "Bereit, deinen Katalog verkaufen zu lassen?",
+      midCtaText: "Sag mir, wie viele Artikel du hast und wie du sie einsetzt: Ich sende dir innerhalb von 24 Stunden ein maßgeschneidertes Angebot.",
+    },
     detail: {
       theService: "Die Leistung",
       includes: "Was enthalten ist",
