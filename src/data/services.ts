@@ -29,6 +29,8 @@ export const services: Service[] = [
   },
   {
     slug: "e-commerce-prodotto",
+    // scatto pubblicitario sneakers Versace: quadrato, resa piena nel box 4:3
+    cover: "/images/portfolio/e-commerce/ecommerce-sneakers-argento.jpg",
     galleryKeys: ["portfolio/e-commerce", "portfolio/prodotto"],
     portfolioSlugs: ["e-commerce", "prodotto"],
     pricing: { type: "quote" },
