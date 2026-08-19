@@ -587,74 +587,74 @@
  "portfolio/e-commerce": [
   {
    "src": "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-fronte.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Camicia in seta - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-camicia-seta-fucsia-retro.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Camicia in seta, retro - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-fronte.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Blazer stampa geometrica - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-blazer-stampa-geometrica-retro.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Blazer stampa geometrica, retro - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-blazer-dettaglio-manica.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Blazer, dettaglio manica - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-abito-velluto-floreale.jpg",
-   "width": 767,
-   "height": 1024,
+   "width": 1799,
+   "height": 2400,
    "title": "Abito in velluto floreale - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-cappotto-avorio.jpg",
-   "width": 767,
-   "height": 1024,
+   "width": 1799,
+   "height": 2400,
    "title": "Cappotto avorio - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-mantella-arancio.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Mantella in lana - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-pantaloni-stampa-geometrica.jpg",
-   "width": 767,
-   "height": 1024,
+   "width": 1799,
+   "height": 2400,
    "title": "Pantaloni stampa geometrica - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-borsa-akris-intreccio.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Borsa Ai in intreccio - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-cintura-pelle.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Cintura in pelle - Akris"
   },
   {
    "src": "/images/portfolio/e-commerce/ecommerce-cintura-dettaglio-fibbia.jpg",
-   "width": 768,
-   "height": 1024,
+   "width": 1800,
+   "height": 2400,
    "title": "Cintura, dettaglio fibbia - Akris"
   },
   {
@@ -734,21 +734,6 @@
    "height": 2400
   },
   {
-   "src": "/images/portfolio/e-commerce/769701-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/769703-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/770191-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
    "src": "/images/portfolio/e-commerce/770508-2048x.jpg-copia.jpg",
    "width": 1800,
    "height": 2400
@@ -770,21 +755,6 @@
   },
   {
    "src": "/images/portfolio/e-commerce/796778-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/796785-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/796786-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/799168-2048x.jpg-copia.jpg",
    "width": 1800,
    "height": 2400
   },
@@ -839,18 +809,8 @@
    "height": 2400
   },
   {
-   "src": "/images/portfolio/e-commerce/809801-2048x.jpg-copia.jpg",
-   "width": 1799,
-   "height": 2400
-  },
-  {
    "src": "/images/portfolio/e-commerce/810026-662ea29a-8a75-4dc0-9b6e-bf49f325a352-2048x.jpg-copia.jpg",
    "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/810027-4d65b0b6-eca2-43ad-ac23-402014a98e1a-2048x.jpg-copia.jpg",
-   "width": 1799,
    "height": 2400
   },
   {
@@ -865,21 +825,6 @@
   },
   {
    "src": "/images/portfolio/e-commerce/815689-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/815833-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/815834-2048x.jpg-copia.jpg",
-   "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/816075-2048x.jpg-copia.jpg",
    "width": 1800,
    "height": 2400
   },
@@ -906,11 +851,6 @@
   {
    "src": "/images/portfolio/e-commerce/839491-13959e5a-7e76-4b23-97c3-6b718a77253e-2048x.jpg-copia.jpg",
    "width": 1800,
-   "height": 2400
-  },
-  {
-   "src": "/images/portfolio/e-commerce/865307-2048x.jpg-copia.jpg",
-   "width": 1799,
    "height": 2400
   },
   {
