@@ -29,7 +29,6 @@ export default async function AboutPage({
 
   const studioPhotos = [
     { src: "/images/about/studio-peccioli-set.webp", width: 1024, height: 682, alt: a.studio.altSet },
-    { src: "/images/about/studio-peccioli-fondale.webp", width: 1024, height: 682, alt: a.studio.altFondale },
     { src: "/images/about/studio-peccioli-laterale.webp", width: 1024, height: 682, alt: a.studio.altLaterale },
     { src: "/images/about/studio-peccioli-pianta.webp", width: 1024, height: 765, alt: a.studio.altPianta },
   ];
@@ -50,7 +49,7 @@ export default async function AboutPage({
       <section className="mx-auto grid max-w-[1400px] gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:px-8">
         <div className="relative aspect-[3/4] overflow-hidden">
           <Image
-            src="/images/about/myself-teal-light.jpg"
+            src="/images/about/mauro-toncelli-ritratto-studio.jpg"
             alt={a.portraitAlt}
             fill
             priority

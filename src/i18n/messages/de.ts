@@ -383,14 +383,13 @@ export const de: Messages = {
     },
     studio: {
       eyebrow: "Das Studio",
-      title: "Ein eigenes Set in Florenz / Peccioli",
+      title: "Ein eigenes Set in Peccioli",
       text: [
         "Ein maßgeschneiderter Raum: nahtloser Hintergrund, kontrolliertes Licht und die richtigen Abstände, um in Ruhe an jeder Aufnahme zu arbeiten.",
         "Hier entstehen E-Commerce, Porträt und Mode: eine stabile Umgebung, in der die Qualität des Lichts nie dem Zufall überlassen wird.",
       ],
-      caption: "Studio, Peccioli (Florenz)",
+      caption: "Studio, Peccioli",
       altSet: "Gesamtansicht des Studio-Sets in Peccioli",
-      altFondale: "Nahtloser Hintergrund des Studios",
       altLaterale: "Seitenansicht des Sets mit dem Licht",
       altPianta: "Draufsicht des Studios",
     },

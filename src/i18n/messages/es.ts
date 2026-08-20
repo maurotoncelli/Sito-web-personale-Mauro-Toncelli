@@ -383,14 +383,13 @@ export const es: Messages = {
     },
     studio: {
       eyebrow: "El estudio",
-      title: "Un set dedicado en Florencia / Peccioli",
+      title: "Un set dedicado en Peccioli",
       text: [
         "Un espacio hecho a medida: fondo infinito, luz controlada y las distancias adecuadas para trabajar con calma en cada toma.",
         "Aquí nacen el e-commerce, el retrato y la moda: un entorno estable donde la calidad de la luz nunca se deja al azar.",
       ],
-      caption: "Estudio, Peccioli (Florencia)",
+      caption: "Estudio, Peccioli",
       altSet: "Vista general del set del estudio en Peccioli",
-      altFondale: "Fondo infinito del estudio",
       altLaterale: "Vista lateral del set con las luces",
       altPianta: "Vista cenital del estudio",
     },

@@ -383,14 +383,13 @@ export const it = {
     },
     studio: {
       eyebrow: "Lo studio",
-      title: "Un set dedicato a Firenze / Peccioli",
+      title: "Un set dedicato a Peccioli",
       text: [
         "Uno spazio costruito su misura: fondale infinito, luce controllata e distanze giuste per lavorare con calma su ogni scatto.",
         "È qui che nascono e-commerce, ritratto e moda: un ambiente stabile dove la qualità della luce non è mai lasciata al caso.",
       ],
-      caption: "Studio, Peccioli (Firenze)",
+      caption: "Studio, Peccioli",
       altSet: "Vista d'insieme del set in studio a Peccioli",
-      altFondale: "Fondale infinito dello studio",
       altLaterale: "Inquadratura laterale del set con le luci",
       altPianta: "Pianta dall'alto dello studio",
     },

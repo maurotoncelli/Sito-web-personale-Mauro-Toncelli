@@ -67,9 +67,15 @@ export function StudioSet({
     <>
       <div className="mt-8 space-y-3">
         {tile(photos[0], 0, "aspect-[16/9]")}
-        <div className="grid grid-cols-3 gap-3">
-          {photos.slice(1).map((p, idx) => tile(p, idx + 1, "aspect-[4/3]"))}
-        </div>
+        {photos.length > 1 && (
+          <div
+            className={`grid gap-3 ${
+              photos.length - 1 >= 3 ? "grid-cols-3" : "grid-cols-2"
+            }`}
+          >
+            {photos.slice(1).map((p, idx) => tile(p, idx + 1, "aspect-[4/3]"))}
+          </div>
+        )}
       </div>
 
       {current && open !== null && (
