@@ -45,8 +45,9 @@ export function hasTranslation(slug: string, locale: string) {
 }
 
 /**
- * Articoli storici (importati da WordPress, journal.json) + nuovi articoli
- * creati dal pannello /keystatic (journal-cms.json, generato al prebuild).
+ * Articoli dal pannello /keystatic (journal-cms.json, generato al prebuild)
+ * + eventuale residuo storico in journal.json. Le traduzioni vivono in
+ * journal-i18n/<lingua>.json, agganciate allo slug.
  */
 export const journalPosts = [
   ...(cmsPosts as JournalPost[]),

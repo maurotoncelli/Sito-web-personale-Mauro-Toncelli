@@ -10,7 +10,9 @@ import os
 import re
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(BASE, "src", "data", "journal.json")
+CMS = os.path.join(BASE, "src", "data", "journal-cms.json")
+LEGACY = os.path.join(BASE, "src", "data", "journal.json")
+SRC = CMS if os.path.exists(CMS) else LEGACY
 OUT_DIR = os.path.join(BASE, "src", "data", "journal-i18n")
 os.makedirs(OUT_DIR, exist_ok=True)
 

@@ -42,7 +42,7 @@ export default config({
   },
   collections: {
     journal: collection({
-      label: "Journal (nuovi articoli)",
+      label: "Journal",
       slugField: "title",
       path: "content/journal/*",
       format: { contentField: "content" },
@@ -61,15 +61,21 @@ export default config({
         }),
         cover: fields.image({
           label: "Copertina",
-          directory: "public/images/journal/cms",
-          publicPath: "/images/journal/cms/",
+          directory: "public/images/journal",
+          publicPath: "/images/journal/",
+        }),
+        htmlImportato: fields.text({
+          label: "HTML importato (WordPress)",
+          multiline: true,
+          description:
+            "Corpo originale importato. Se è compilato, il sito usa questo HTML (così gallery e video restano identici). Le traduzioni EN/DE/FR/ES/ZH/RU/AR restano collegate allo slug. Per riscrivere l'articolo nell'editor Markdoc, svuota questo campo.",
         }),
         content: fields.markdoc({
-          label: "Contenuto",
+          label: "Contenuto (editor)",
           options: {
             image: {
-              directory: "public/images/journal/cms",
-              publicPath: "/images/journal/cms/",
+              directory: "public/images/journal",
+              publicPath: "/images/journal/",
             },
           },
         }),

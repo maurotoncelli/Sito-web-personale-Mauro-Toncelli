@@ -103,15 +103,22 @@ async function generaJournal() {
   const posts = [];
   for (const entry of entries) {
     const e = entry.entry;
+    const title = e.title;
+    const imported = typeof e.htmlImportato === "string" ? e.htmlImportato.trim() : "";
     const transformed = Markdoc.transform(e.content.node);
-    const html = Markdoc.renderers.html(transformed);
+    const html = imported || Markdoc.renderers.html(transformed);
     posts.push({
       slug: entry.slug,
       date: e.date,
-      title: e.title,
+      title,
       excerpt: e.excerpt,
       categories: e.categories,
-      cover: e.cover ? { src: e.cover, ...dimensioni(e.cover) } : null,
+      cover: e.cover
+        ? (() => {
+            const src = e.cover.startsWith("/") ? e.cover : `/images/journal/${e.cover}`;
+            return { src, ...dimensioni(src) };
+          })()
+        : null,
       content: html,
     });
   }
