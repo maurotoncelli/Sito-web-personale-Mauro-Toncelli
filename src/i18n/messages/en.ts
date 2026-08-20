@@ -381,6 +381,19 @@ export const en: Messages = {
       eventi: "Events",
       drone: "Drone",
     },
+    studio: {
+      eyebrow: "The studio",
+      title: "A dedicated set in Florence / Peccioli",
+      text: [
+        "A purpose-built space: seamless backdrop, controlled light and the right distances to work calmly on every shot.",
+        "This is where e-commerce, portrait and fashion come to life: a stable environment where the quality of light is never left to chance.",
+      ],
+      caption: "Studio, Peccioli (Florence)",
+      altSet: "Overview of the studio set in Peccioli",
+      altFondale: "Seamless backdrop of the studio",
+      altLaterale: "Side view of the set with the lights",
+      altPianta: "Top-down view of the studio",
+    },
     brands: "Brands I've worked with",
     publications: "Publications",
     publicationsList: [

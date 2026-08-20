@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CtaSection } from "@/components/CtaSection";
 import { ClientLogos } from "@/components/ClientLogos";
+import { StudioSet } from "@/components/StudioSet";
 import { site } from "@/data/site";
 import { getMessages } from "@/i18n";
 import { pageAlternates } from "@/lib/seo";
@@ -25,6 +26,13 @@ export default async function AboutPage({
   const { locale } = await params;
   const m = getMessages(locale);
   const a = m.about;
+
+  const studioPhotos = [
+    { src: "/images/about/studio-peccioli-set.webp", width: 1024, height: 682, alt: a.studio.altSet },
+    { src: "/images/about/studio-peccioli-fondale.webp", width: 1024, height: 682, alt: a.studio.altFondale },
+    { src: "/images/about/studio-peccioli-laterale.webp", width: 1024, height: 682, alt: a.studio.altLaterale },
+    { src: "/images/about/studio-peccioli-pianta.webp", width: 1024, height: 765, alt: a.studio.altPianta },
+  ];
 
   const ambiti = [
     { label: a.ambiti.moda, href: `/${locale}/servizi/moda` },
@@ -83,6 +91,20 @@ export default async function AboutPage({
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Lo studio */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-8">
+          <p className="eyebrow">{a.studio.eyebrow}</p>
+          <h2 className="mt-2 max-w-2xl text-2xl md:text-3xl">{a.studio.title}</h2>
+          <div className="mt-4 max-w-2xl space-y-3 leading-relaxed text-muted">
+            {a.studio.text.map((p) => (
+              <p key={p.slice(0, 24)}>{p}</p>
+            ))}
+          </div>
+          <StudioSet photos={studioPhotos} caption={a.studio.caption} common={m.common} />
         </div>
       </section>
 

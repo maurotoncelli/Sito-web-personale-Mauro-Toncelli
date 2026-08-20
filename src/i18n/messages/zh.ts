@@ -381,6 +381,19 @@ export const zh: Messages = {
       eventi: "活动",
       drone: "无人机",
     },
+    studio: {
+      eyebrow: "工作室",
+      title: "位于佛罗伦萨 / 佩乔利的专属影棚",
+      text: [
+        "一个量身打造的空间：无缝背景、可控的光线，以及从容拍摄每一张作品所需的合适距离。",
+        "电商、人像与时尚都在这里诞生：一个稳定的环境，光线品质从不听凭偶然。",
+      ],
+      caption: "工作室，佩乔利（佛罗伦萨）",
+      altSet: "佩乔利工作室场景全景",
+      altFondale: "工作室的无缝背景",
+      altLaterale: "带灯光的场景侧视图",
+      altPianta: "工作室俯视图",
+    },
     brands: "合作过的品牌",
     publications: "发表与刊登",
     publicationsList: [

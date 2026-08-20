@@ -381,6 +381,19 @@ export const fr: Messages = {
       eventi: "Événements",
       drone: "Drone",
     },
+    studio: {
+      eyebrow: "Le studio",
+      title: "Un plateau dédié à Florence / Peccioli",
+      text: [
+        "Un espace conçu sur mesure : fond infini, lumière maîtrisée et les bonnes distances pour travailler calmement sur chaque prise.",
+        "C'est ici que naissent l'e-commerce, le portrait et la mode : un environnement stable où la qualité de la lumière n'est jamais laissée au hasard.",
+      ],
+      caption: "Studio, Peccioli (Florence)",
+      altSet: "Vue d'ensemble du plateau du studio à Peccioli",
+      altFondale: "Fond infini du studio",
+      altLaterale: "Vue latérale du plateau avec les lumières",
+      altPianta: "Vue en plongée du studio",
+    },
     brands: "Marques avec lesquelles j'ai travaillé",
     publications: "Publications",
     publicationsList: [
