@@ -45,19 +45,19 @@ export function StudioSet({
 
   const current = open !== null ? photos[open] : null;
 
-  const tile = (photo: StudioPhoto, i: number, aspect: string) => (
+  const tile = (photo: StudioPhoto, i: number) => (
     <button
       key={photo.src}
       type="button"
       onClick={() => setOpen(i)}
       aria-label={`${common.openImage} ${i + 1} / ${photos.length}`}
-      className={`group relative block w-full cursor-zoom-in overflow-hidden ${aspect}`}
+      className="group relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden"
     >
       <Image
         src={photo.src}
         alt={photo.alt}
         fill
-        sizes={i === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 22vw"}
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 22vw"
         className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
       />
     </button>
@@ -65,17 +65,8 @@ export function StudioSet({
 
   return (
     <>
-      <div className="mt-8 space-y-3">
-        {tile(photos[0], 0, "aspect-[16/9]")}
-        {photos.length > 1 && (
-          <div
-            className={`grid gap-3 ${
-              photos.length - 1 >= 3 ? "grid-cols-3" : "grid-cols-2"
-            }`}
-          >
-            {photos.slice(1).map((p, idx) => tile(p, idx + 1, "aspect-[4/3]"))}
-          </div>
-        )}
+      <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {photos.map((p, i) => tile(p, i))}
       </div>
 
       {current && open !== null && (
