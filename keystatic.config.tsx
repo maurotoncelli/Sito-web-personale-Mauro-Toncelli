@@ -98,8 +98,11 @@ export default config({
           fields.object({
             immagine: fields.image({
               label: "Immagine",
-              directory: "public/images/uploads",
-              publicPath: "/images/uploads/",
+              // Le foto storiche stanno in /images/portfolio/..., /images/home/...
+              // (non in /uploads). Allineare directory e publicPath al file
+              // reale così Keystatic può mostrare l'anteprima.
+              directory: "public/images",
+              publicPath: "/images/",
               validation: { isRequired: true },
             }),
             titolo: fields.text({

@@ -39,7 +39,8 @@ async function generaMedia() {
     const slug = entry.slug;
     const key = SPECIALI.has(slug) ? slug : `portfolio/${slug}`;
     groups[key] = entry.entry.foto.map((f) => {
-      const src = f.immagine as string;
+      const raw = f.immagine as string;
+      const src = raw.startsWith("/") ? raw : `/images/${raw}`;
       const { width, height } = dimensioni(src);
       return {
         src,
