@@ -100,10 +100,16 @@ export default config({
               label: "Titolo (testo alternativo)",
               description: "Usato come alt per SEO e accessibilità.",
             }),
+            didascalia: fields.text({
+              label: "Didascalia (lightbox)",
+              description:
+                "Visibile sotto la foto nel lightbox. Es. #sardegna  @modella  @assistant",
+            }),
           }),
           {
             label: "Foto (trascina per riordinare, la prima è la copertina)",
-            itemLabel: (props) => props.fields.titolo.value || "foto",
+            itemLabel: (props) =>
+              props.fields.didascalia.value || props.fields.titolo.value || "foto",
           }
         ),
       },

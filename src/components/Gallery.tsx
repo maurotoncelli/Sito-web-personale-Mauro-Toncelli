@@ -200,9 +200,19 @@ export function Gallery({
               </button>
             </>
           )}
-          <span className="absolute bottom-5 left-1/2 -translate-x-1/2 text-xs tracking-widest text-white/60">
-            {open + 1} / {items.length}
-          </span>
+          <div
+            className="absolute bottom-5 left-1/2 max-w-[min(90vw,40rem)] -translate-x-1/2 px-4 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {current.kind === "photo" && current.caption && (
+              <p className="text-[13px] leading-relaxed tracking-[0.04em] text-white/80">
+                {current.caption}
+              </p>
+            )}
+            <p className="mt-1 text-xs tracking-widest text-white/55">
+              {open + 1} / {items.length}
+            </p>
+          </div>
         </div>
       )}
     </>

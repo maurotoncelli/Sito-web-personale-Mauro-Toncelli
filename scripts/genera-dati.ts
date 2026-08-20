@@ -41,7 +41,13 @@ async function generaMedia() {
     groups[key] = entry.entry.foto.map((f) => {
       const src = f.immagine as string;
       const { width, height } = dimensioni(src);
-      return { src, width, height, ...(f.titolo ? { title: f.titolo } : {}) };
+      return {
+        src,
+        width,
+        height,
+        ...(f.titolo ? { title: f.titolo } : {}),
+        ...(f.didascalia ? { caption: f.didascalia } : {}),
+      };
     });
   }
   fs.writeFileSync(

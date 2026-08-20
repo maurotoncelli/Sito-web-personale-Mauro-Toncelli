@@ -1,6 +1,13 @@
 import media from "./media.json";
 
-export type MediaItem = { src: string; width: number; height: number; title?: string };
+export type MediaItem = {
+  src: string;
+  width: number;
+  height: number;
+  title?: string;
+  /** Didascalia visibile nel lightbox (es. #sardegna  @modella). */
+  caption?: string;
+};
 
 const groups = media as Record<string, MediaItem[]>;
 
