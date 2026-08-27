@@ -24,6 +24,7 @@ export const en: Messages = {
     seeAllPortfolio: "See all in the portfolio",
     onQuote: "On request",
     plusVat: "Prices + VAT. Every project is different: quotes are always tailored.",
+    vatIncluded: "Prices include VAT. Every project is different: quotes are always tailored.",
     niches: "Niches",
     emptyGallery: "Gallery being updated — write me to see work in this category.",
     openImage: "Open image",

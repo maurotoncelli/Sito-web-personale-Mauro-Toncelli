@@ -24,6 +24,7 @@ export const de: Messages = {
     seeAllPortfolio: "Alles im Portfolio ansehen",
     onQuote: "Auf Anfrage",
     plusVat: "Preise zzgl. MwSt. Jedes Projekt ist anders: das Angebot ist immer massgeschneidert.",
+    vatIncluded: "Preise inkl. MwSt. Jedes Projekt ist anders: das Angebot ist immer massgeschneidert.",
     niches: "Nischen",
     emptyGallery: "Galerie wird aktualisiert — schreiben Sie mir, um Arbeiten aus dieser Kategorie zu sehen.",
     openImage: "Bild öffnen",

@@ -182,7 +182,11 @@ export default async function ServicePage({
           {"pricingNote" in text && (
             <p className="mt-3 text-sm text-muted">{(text as { pricingNote: string }).pricingNote}</p>
           )}
-          <p className="mt-3 text-xs text-muted">{m.common.plusVat}</p>
+          {/* Tier = servizi B2C (matrimoni, maternità): prezzo finale IVA inclusa.
+              Gli altri servizi (B2B) restano "+ IVA". */}
+          <p className="mt-3 text-xs text-muted">
+            {service.pricing.type === "tiers" ? m.common.vatIncluded : m.common.plusVat}
+          </p>
         </div>
 
         {/* Gallery mista — solo se c'è lavoro vero (blueprint §5) */}

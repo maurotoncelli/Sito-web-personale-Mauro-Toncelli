@@ -22,6 +22,7 @@ export const it = {
     seeAllPortfolio: "Vedi tutto nel portfolio",
     onQuote: "Su preventivo",
     plusVat: "Prezzi + IVA. Ogni progetto è diverso: il preventivo è sempre su misura.",
+    vatIncluded: "Prezzi IVA inclusa. Ogni progetto è diverso: il preventivo è sempre su misura.",
     niches: "Nicchie",
     emptyGallery: "Gallery in aggiornamento — scrivimi per vedere lavori di questa categoria.",
     openImage: "Apri immagine",

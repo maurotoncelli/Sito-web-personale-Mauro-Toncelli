@@ -24,6 +24,7 @@ export const fr: Messages = {
     seeAllPortfolio: "Tout voir dans le portfolio",
     onQuote: "Sur devis",
     plusVat: "Prix + TVA. Chaque projet est différent : le devis est toujours sur mesure.",
+    vatIncluded: "Prix TVA incluse. Chaque projet est différent : le devis est toujours sur mesure.",
     niches: "Niches",
     emptyGallery: "Galerie en cours de mise à jour — écrivez-moi pour voir des travaux de cette catégorie.",
     openImage: "Ouvrir l'image",

@@ -24,6 +24,7 @@ export const zh: Messages = {
     seeAllPortfolio: "查看全部作品",
     onQuote: "按需报价",
     plusVat: "价格另加增值税。每个项目都不同：报价始终量身定制。",
+    vatIncluded: "价格已含增值税。每个项目都不同：报价始终量身定制。",
     niches: "细分领域",
     emptyGallery: "图库更新中——写信给我即可查看该类别作品。",
     openImage: "打开图片",

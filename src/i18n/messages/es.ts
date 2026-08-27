@@ -24,6 +24,7 @@ export const es: Messages = {
     seeAllPortfolio: "Ver todo en el portfolio",
     onQuote: "Bajo presupuesto",
     plusVat: "Precios + IVA. Cada proyecto es distinto: el presupuesto siempre es a medida.",
+    vatIncluded: "Precios con IVA incluido. Cada proyecto es distinto: el presupuesto siempre es a medida.",
     niches: "Nichos",
     emptyGallery: "Galería en actualización — escríbeme para ver trabajos de esta categoría.",
     openImage: "Abrir imagen",
