@@ -88,7 +88,7 @@ export const de: Messages = {
   services: {
     eyebrow: "Leistungen",
     title: "Wie ich Ihnen helfen kann",
-    intro: "Sechs Makro-Leistungen, ein Versprechen: Bilder, die um Ihr Kommunikationsziel herum entstehen.",
+    intro: "Sieben Makro-Leistungen, ein Versprechen: Bilder, die um Ihr Kommunikationsziel herum entstehen.",
     metaDescription:
       "Foto- und Videoleistungen: Mode, E-Commerce, Architektur und Interieur, Corporate, Hochzeiten und Events. Zwischen Neuchâtel und Florenz, in ganz Europa.",
     fromPrefix: "ab",
@@ -253,6 +253,54 @@ export const de: Messages = {
           { q: "Reisen Sie für Hochzeiten?", a: "Ja, ich fotografiere Hochzeiten in der ganzen Toskana, in Italien und im Ausland. Reisen werden im Voraus geplant, alle Kosten transparent vereinbart." },
           { q: "Wie sind die Lieferzeiten?", a: "Die Lieferzeiten werden im Vertrag vereinbart, um eine sorgfältige Bearbeitung und Postproduktion zu gewährleisten. Die private Online-Galerie ist in allen Paketen enthalten." },
           { q: "Liefern Sie RAW-Dateien?", a: "Die Lieferung der RAW-Dateien ist gegen einen im Vertrag ausgewiesenen Aufpreis möglich." },
+        ],
+      },
+      maternita: {
+        name: "Babybauch / Maternity",
+        claim: "Die Zeit der Erwartung, erzählt mit dem Blick der Mode.",
+        description:
+          "Elegante, natürliche Schwangerschaftsporträts mit der Detailgenauigkeit eines Modefotografen. In der Schweiz, zwischen Neuenburg und der Romandie, outdoor oder bei Ihnen zu Hause; in der Toskana im Studio in Peccioli oder on location (gleicher Preis). Sanft geführte Posen, sorgfältig gesetztes Licht und eine Auswahl mit Fine-Art-Retusche.",
+        deliverables: [
+          "Outfit-Beratung und Guide zur Vorbereitung",
+          "Shooting outdoor, zu Hause oder im Studio",
+          "Partner und Kinder Teil der Geschichte (ab Signature)",
+          "Fine-Art-Auswahl mit aufwendiger Retusche",
+          "Private Online-Galerie mit Download",
+        ],
+        pricingNote:
+          "CHF-Preise gelten für die Schweiz (Basis Neuenburg) für Shootings outdoor oder zu Hause; Mietstudio mit fixem Zuschlag: ab CHF 120 (Essential), CHF 180 (Signature), CHF 250 (Editorial). EUR-Preise gelten für die Toskana, Studio in Peccioli und Anfahrt bis 40 km inklusive. Zusätzliche Fotos über das Paket hinaus: CHF 20 / €15 pro Bild.",
+        tierPrices: {
+          essential: "CHF 400 · €300",
+          signature: "CHF 650 · €490",
+          editorial: "CHF 1'100 · €790",
+        },
+        tiers: {
+          essential: [
+            "1,5 Std. Shooting — Studio oder outdoor",
+            "1-2 Outfits",
+            "30+ retuschierte Fotos, davon 5 Fine Art",
+            "Private Online-Galerie",
+          ],
+          signature: [
+            "2,5 Std. — zwei Looks / zwei Settings",
+            "Partner und Kinder inklusive",
+            "Outfit-Beratung mit Moodboard",
+            "60+ retuschierte Fotos, davon 10 Fine Art",
+          ],
+          editorial: [
+            "Halber Tag mit Creative Direction",
+            "Moodboard, Styling und MUA-Koordination",
+            "80+ Fotos im Editorial-Stil, davon 15 Fine Art",
+            "30s Vertikal-Reel + 1 Fine-Art-Print",
+          ],
+        },
+        faq: [
+          { q: "Wann ist der beste Zeitpunkt für ein Babybauch-Shooting?", a: "Zwischen der 28. und 34. Woche: Der Bauch ist schön sichtbar und Sie bewegen sich noch bequem. Bei anderen Bedürfnissen passen wir uns an — der Termin kann früh reserviert und verschoben werden." },
+          { q: "Wo findet das Shooting statt?", a: "In der Schweiz arbeite ich outdoor oder bei Ihnen zu Hause, zwischen Neuenburg und der Romandie; wenn Sie ein Studio bevorzugen, miete ich eines mit fixem Zuschlag gemäss Preisliste. In der Toskana: in meinem Studio in Peccioli oder on location, zum gleichen Preis, Anfahrt bis 40 km inklusive." },
+          { q: "Was ziehe ich an? Muss ich die Outfits selbst planen?", a: "Ich begleite Sie: Die Outfit-Beratung ist in jedem Paket enthalten. Fliessende Kleider, die der Silhouette folgen, und neutrale Töne wirken am besten. Bei Signature erstellen wir gemeinsam ein Moodboard; bei Editorial übernehme ich Styling und dedizierte Maternity-Kleider." },
+          { q: "Können Partner und Kinder dabei sein?", a: "Natürlich. Bei Essential sind einige Paarfotos immer dabei; ab Signature wird die Familie mit eigenen Momenten Teil der Geschichte." },
+          { q: "Wie viele Fotos erhalte ich und wann?", a: "30+ Fotos mit Essential, 60+ mit Signature und 80+ mit Editorial, alle retuschiert und color graded, mit einer Fine-Art-Auswahl. Lieferung in 2-3 Wochen über die private Online-Galerie. Zusätzliche Fotos: CHF 20 / €15 pro Bild." },
+          { q: "Bieten Sie auch Newborn-Shootings an?", a: "Nein: Ich bin auf die Erzählung der Erwartung im Editorial-Stil spezialisiert. Für Newborn-Fotografie — die eigene Kompetenzen und Umgebungen erfordert — empfehle ich gerne vertrauenswürdige Kolleginnen und Kollegen." },
         ],
       },
       eventi: {

@@ -65,6 +65,9 @@ export default async function ServicePage({
 
   const tierIncludes =
     "tiers" in text ? (text as { tiers: Record<string, string[]> }).tiers : undefined;
+  // Listino localizzato per mercato (es. maternità: EUR/CHF con ordine per lingua)
+  const tierPrices =
+    "tierPrices" in text ? (text as { tierPrices: Record<string, string> }).tierPrices : undefined;
   const faq = "faq" in text ? (text as { faq: { q: string; a: string }[] }).faq : undefined;
 
   const jsonLd = serviceJsonLd({
@@ -151,17 +154,23 @@ export default async function ServicePage({
           <h2 className="eyebrow">{d.investment}</h2>
           {service.pricing.type === "tiers" ? (
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {service.pricing.tiers.map((tier) => (
+              {service.pricing.tiers.map((tier) => {
+                // "€300 · CHF 400" → prezzo del mercato principale grande,
+                // l'altro mercato piccolo e grigio (meno confusione)
+                const [mainPrice, altPrice] = (tierPrices?.[tier.id] ?? tier.price).split(" · ");
+                return (
                 <div key={tier.id} className="border border-border p-6">
                   <h3 className="text-sm tracking-[0.15em]">{tier.name}</h3>
-                  <p className="mt-2 text-2xl font-light">{tier.price}</p>
+                  <p className="mt-2 text-2xl font-light">{mainPrice}</p>
+                  {altPrice && <p className="mt-0.5 text-sm text-muted">{altPrice}</p>}
                   <ul className="mt-4 space-y-2 text-sm text-muted">
                     {(tierIncludes?.[tier.id] ?? []).map((inc) => (
                       <li key={inc}>{inc}</li>
                     ))}
                   </ul>
                 </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <p className="mt-4 text-2xl font-light">

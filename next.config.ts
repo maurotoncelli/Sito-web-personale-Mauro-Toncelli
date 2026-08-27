@@ -17,7 +17,7 @@ const legacyServiceRedirects: [string, string][] = [
   ["wedding-photography-service", "/it/servizi/matrimoni"],
   ["couple-engagement-photography-services", "/it/servizi/matrimoni"],
   ["events-photography", "/it/servizi/eventi"],
-  ["maternity-photography", "/it/portfolio?categoria=maternita"],
+  ["maternity-photography", "/it/servizi/maternita"],
 ];
 
 const nextConfig: NextConfig = {

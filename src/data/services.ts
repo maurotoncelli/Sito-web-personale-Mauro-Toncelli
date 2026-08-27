@@ -2,7 +2,7 @@
  * Dati strutturali dei servizi (blueprint §7). I testi localizzati
  * (nome, claim, descrizione, deliverable) vivono in src/i18n/messages/.
  */
-export type TierId = "intimate" | "essential" | "signature" | "grand";
+export type TierId = "intimate" | "essential" | "signature" | "grand" | "editorial";
 
 export type Service = {
   slug: string;
@@ -66,6 +66,22 @@ export const services: Service[] = [
         { id: "essential", name: "Essential", price: "€1.200" },
         { id: "signature", name: "Signature", price: "€2.800" },
         { id: "grand", name: "Grand", price: "€4.500" },
+      ],
+    },
+  },
+  {
+    slug: "maternita",
+    cover: "/images/portfolio/maternita/DSC0045-copia-1.jpg",
+    galleryKeys: ["portfolio/maternita"],
+    portfolioSlugs: ["maternita"],
+    // Prezzi base in EUR (Toscana); il listino CHF per la Svizzera vive nei
+    // messages per lingua (tierPrices), così FR/DE mostrano i franchi per primi.
+    pricing: {
+      type: "tiers",
+      tiers: [
+        { id: "essential", name: "Essential", price: "€300" },
+        { id: "signature", name: "Signature", price: "€490" },
+        { id: "editorial", name: "Editorial", price: "€790" },
       ],
     },
   },

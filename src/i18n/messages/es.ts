@@ -88,7 +88,7 @@ export const es: Messages = {
   services: {
     eyebrow: "Servicios",
     title: "Cómo puedo ayudarte",
-    intro: "Seis macro-servicios, una sola promesa: imágenes construidas en torno a tu objetivo de comunicación.",
+    intro: "Siete macro-servicios, una sola promesa: imágenes construidas en torno a tu objetivo de comunicación.",
     metaDescription:
       "Servicios de fotografía y vídeo: moda, e-commerce, arquitectura e interiores, corporate, bodas y eventos. Entre Neuchâtel y Florencia, en toda Europa.",
     fromPrefix: "desde",
@@ -253,6 +253,54 @@ export const es: Messages = {
           { q: "¿Viajas para las bodas?", a: "Sí, fotografío bodas en toda la Toscana, en Italia y en el extranjero. Los desplazamientos se organizan con antelación y cada coste se define de forma transparente." },
           { q: "¿Cuáles son los plazos de entrega?", a: "Los plazos se acuerdan en el contrato, para garantizar una cuidada fase de edición y postproducción. La galería privada online está incluida en todos los paquetes." },
           { q: "¿Entregas los archivos RAW?", a: "La entrega de los RAW es posible con un coste extra indicado en el contrato." },
+        ],
+      },
+      maternita: {
+        name: "Embarazo / Maternity",
+        claim: "La espera, contada con la mirada de la moda.",
+        description:
+          "Retratos de embarazo elegantes y naturales, con el cuidado del detalle de un fotógrafo de moda. En la Toscana, en mi estudio de Peccioli o en exteriores (mismo precio); en Suiza, entre Neuchâtel y la Romandía, en exteriores o a domicilio. Poses guiadas con suavidad, luz cuidada y una selección retocada fine art.",
+        deliverables: [
+          "Asesoría de vestuario y guía de preparación",
+          "Sesión en el estudio de Peccioli o en exteriores — mismo precio",
+          "Pareja e hijos parte del relato (desde Signature)",
+          "Selección fine art con retoque en profundidad",
+          "Galería privada online con descarga",
+        ],
+        pricingNote:
+          "Los precios en EUR se aplican a la Toscana, estudio de Peccioli incluido y desplazamiento incluido hasta 40 km. En Suiza (base en Neuchâtel) se aplican los precios en CHF para sesiones en exteriores o a domicilio; estudio de alquiler con suplemento fijo: desde CHF 120 (Essential), CHF 180 (Signature), CHF 250 (Editorial). Fotos extra fuera del paquete: 15 € / CHF 20 cada una.",
+        tierPrices: {
+          essential: "€300 · CHF 400",
+          signature: "€490 · CHF 650",
+          editorial: "€790 · CHF 1.100",
+        },
+        tiers: {
+          essential: [
+            "1h30 de sesión — estudio o exteriores",
+            "1-2 conjuntos",
+            "30+ fotos retocadas, 5 de ellas fine art",
+            "Galería privada online",
+          ],
+          signature: [
+            "2h30 — dos looks / dos ambientaciones",
+            "Pareja e hijos incluidos",
+            "Asesoría de vestuario con moodboard",
+            "60+ fotos retocadas, 10 de ellas fine art",
+          ],
+          editorial: [
+            "Media jornada con dirección creativa",
+            "Moodboard, estilismo y coordinación de MUA",
+            "80+ fotos de estilo editorial, 15 de ellas fine art",
+            "Reel vertical de 30s + 1 impresión fine art",
+          ],
+        },
+        faq: [
+          { q: "¿Cuál es el mejor momento para la sesión de embarazo?", a: "Entre la semana 28 y la 34: la barriga se ve preciosa y todavía te mueves con comodidad. Si tu situación es distinta, nos adaptamos — la fecha se puede reservar con antelación y ajustar." },
+          { q: "¿Dónde se realiza la sesión?", a: "En la Toscana: en mi estudio de Peccioli o en exteriores (campo, pueblo, mar) al mismo precio, con desplazamiento incluido hasta 40 km. En Suiza trabajo en exteriores o a domicilio entre Neuchâtel y la Romandía; si prefieres un estudio, lo alquilo con un suplemento fijo indicado en la lista de precios." },
+          { q: "¿Qué me pongo? ¿Tengo que planear yo el vestuario?", a: "Te guío yo: la asesoría de vestuario está incluida en todos los paquetes. Funcionan muy bien los vestidos fluidos que siguen la silueta y los tonos neutros. Con Signature preparamos un moodboard juntos; con Editorial me ocupo del estilismo y de vestidos de maternidad dedicados." },
+          { q: "¿Pueden participar mi pareja y mis hijos?", a: "Por supuesto. Con Essential siempre caben algunas fotos de pareja; desde Signature la familia pasa a formar parte del relato con momentos dedicados." },
+          { q: "¿Cuántas fotos recibo y en cuánto tiempo?", a: "30+ fotos con Essential, 60+ con Signature y 80+ con Editorial, todas retocadas y con color grading, con una selección de retoque fine art. Entrega en 2-3 semanas en la galería privada online. Las fotos extra fuera del paquete cuestan 15 € / CHF 20 cada una." },
+          { q: "¿Haces también sesiones newborn?", a: "No: estoy especializado en contar la espera con un estilo editorial. Para el newborn — que requiere competencias y entornos dedicados — puedo recomendarte colegas de confianza." },
         ],
       },
       eventi: {

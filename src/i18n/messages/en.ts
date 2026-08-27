@@ -88,7 +88,7 @@ export const en: Messages = {
   services: {
     eyebrow: "Services",
     title: "How I can help you",
-    intro: "Six macro-services, one promise: images built around your communication goal.",
+    intro: "Seven macro-services, one promise: images built around your communication goal.",
     metaDescription:
       "Photography and video services: fashion, e-commerce, architecture and interiors, corporate, weddings and events. Between Neuchâtel and Florence, across Europe.",
     fromPrefix: "from",
@@ -253,6 +253,54 @@ export const en: Messages = {
           { q: "Do you travel for weddings?", a: "Yes, I photograph weddings throughout Tuscany, across Italy and abroad. Travel is planned in advance and every cost is set out transparently." },
           { q: "What are the delivery times?", a: "Delivery times are agreed in the contract, allowing for careful editing and post-production. The private online gallery is included in all packages." },
           { q: "Do you deliver RAW files?", a: "RAW delivery is possible for an extra cost stated at contract stage." },
+        ],
+      },
+      maternita: {
+        name: "Maternity / Pregnancy",
+        claim: "The wait, told through a fashion lens.",
+        description:
+          "Elegant, natural pregnancy portraits with the attention to detail of a fashion photographer. In Tuscany at my Peccioli studio or on location (same price); in Switzerland, between Neuchâtel and Romandie, outdoors or at home. Gently guided poses, carefully crafted light and a fine-art retouched selection.",
+        deliverables: [
+          "Outfit consultation and preparation guide",
+          "Shoot at the Peccioli studio or on location — same price",
+          "Partner and children part of the story (from Signature)",
+          "Fine-art selection with in-depth retouching",
+          "Private online gallery with download",
+        ],
+        pricingNote:
+          "EUR prices apply to Tuscany, Peccioli studio included and travel included within 40 km. In Switzerland (based in Neuchâtel) CHF prices apply to outdoor or at-home sessions; studio rental with a fixed supplement: from CHF 120 (Essential), CHF 180 (Signature), CHF 250 (Editorial). Extra photos beyond the package: €15 / CHF 20 each.",
+        tierPrices: {
+          essential: "€300 · CHF 400",
+          signature: "€490 · CHF 650",
+          editorial: "€790 · CHF 1,100",
+        },
+        tiers: {
+          essential: [
+            "1.5h shoot — studio or outdoors",
+            "1-2 outfits",
+            "30+ retouched photos, 5 of them fine art",
+            "Private online gallery",
+          ],
+          signature: [
+            "2.5h — two looks / two settings",
+            "Partner and children included",
+            "Outfit consultation with moodboard",
+            "60+ retouched photos, 10 of them fine art",
+          ],
+          editorial: [
+            "Half day with creative direction",
+            "Moodboard, styling and MUA coordination",
+            "80+ editorial-style photos, 15 of them fine art",
+            "30s vertical reel + 1 fine-art print",
+          ],
+        },
+        faq: [
+          { q: "When is the best time for a maternity shoot?", a: "Between week 28 and 34: the bump is beautifully visible and you still move comfortably. If your situation is different we'll adapt — the date can be booked early and adjusted." },
+          { q: "Where does the shoot take place?", a: "In Tuscany: at my studio in Peccioli or on location (countryside, village, seaside) at the same price, with travel included within 40 km. In Switzerland I work outdoors or at your home between Neuchâtel and Romandie; if you prefer a studio, I rent one with a fixed supplement shown in the price list." },
+          { q: "What should I wear? Do I need to plan the outfits?", a: "I'll guide you: outfit consultation is included in every package. Flowing dresses that follow your silhouette and neutral tones work best. With Signature we build a moodboard together; with Editorial I take care of styling and dedicated maternity gowns." },
+          { q: "Can my partner and children join?", a: "Of course. With Essential a few couple shots are always included; from Signature up, the family becomes part of the story with dedicated moments." },
+          { q: "How many photos do I receive and when?", a: "30+ photos with Essential, 60+ with Signature and 80+ with Editorial, all retouched and color graded, with a fine-art retouched selection. Delivery in 2-3 weeks via private online gallery. Extra photos beyond the package are €15 / CHF 20 each." },
+          { q: "Do you also offer newborn sessions?", a: "No: I specialise in telling the story of the wait, in an editorial style. For newborn photography — which requires dedicated skills and settings — I can recommend trusted colleagues." },
         ],
       },
       eventi: {

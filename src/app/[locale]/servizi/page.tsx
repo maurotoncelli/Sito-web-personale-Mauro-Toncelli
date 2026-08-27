@@ -19,8 +19,17 @@ export async function generateMetadata({
 
 function priceLabel(s: Service, m: Messages) {
   if (s.pricing.type === "from") return `${m.services.fromPrefix} ${s.pricing.from}`;
-  if (s.pricing.type === "tiers")
-    return `${m.services.fromPrefix} ${s.pricing.tiers[0].price}`;
+  if (s.pricing.type === "tiers") {
+    const first = s.pricing.tiers[0];
+    const text = m.services.items[s.slug as keyof typeof m.services.items];
+    // Listino localizzato per mercato (es. maternità EUR/CHF), se definito
+    const override =
+      "tierPrices" in text
+        ? (text as { tierPrices: Record<string, string> }).tierPrices[first.id]
+        : undefined;
+    // Solo il prezzo del mercato principale ("€300 · CHF 400" → "€300")
+    return `${m.services.fromPrefix} ${(override ?? first.price).split(" · ")[0]}`;
+  }
   return m.common.onQuote;
 }
 
