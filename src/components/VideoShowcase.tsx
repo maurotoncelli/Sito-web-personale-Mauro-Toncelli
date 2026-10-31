@@ -120,7 +120,7 @@ export function VideoShowcase({
     <>
       <div className="grid gap-6 sm:grid-cols-2">{horizontal.map(card)}</div>
       {vertical.length > 0 && (
-        <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-3">{vertical.map(card)}</div>
+        <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4">{vertical.map(card)}</div>
       )}
 
       {open && (

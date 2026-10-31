@@ -82,6 +82,15 @@ export const videos: VideoItem[] = [
     vertical: true,
     categoria: "eventi",
   },
+  {
+    src: "/videos/reel-erald-dea.mp4",
+    preview: "/videos/previews/reel-erald-dea.mp4",
+    poster: "/videos/reel-erald-dea-poster.jpg",
+    title: "Wedding reel",
+    client: "Erald & Dea",
+    vertical: true,
+    categoria: "matrimonio",
+  },
 ];
 
 export function videosForCategory(slug: string) {
