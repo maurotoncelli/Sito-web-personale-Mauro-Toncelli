@@ -123,6 +123,18 @@
    "src": "/images/clienti/Falconeri.jpg",
    "width": 2400,
    "height": 2400
+  },
+  {
+   "src": "/images/clienti/IAMFA-logo.jpg",
+   "width": 1000,
+   "height": 1000,
+   "title": "IAMFA — International Association of Museum Facility Administrators"
+  },
+  {
+   "src": "/images/clienti/IOLC-logo.jpg",
+   "width": 1000,
+   "height": 1000,
+   "title": "IOLC — International Oncology Leadership Conference"
   }
  ],
  "portfolio/coppia": [
@@ -895,6 +907,69 @@
   }
  ],
  "portfolio/eventi": [
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-gala-salone.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Cena di gala IAMFA nel Salone delle Feste, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-aperitivo-specchi.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Aperitivo e networking nella Galleria degli Specchi, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-salone-feste-verticale.webp",
+   "width": 682,
+   "height": 1024,
+   "title": "Salone delle Feste con volta affrescata e lampadari, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-cena-gala.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Evento corporate IAMFA nel Salone delle Feste, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-atrio-statue.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Atrio monumentale con statue illuminate, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-infilata-sale.webp",
+   "width": 682,
+   "height": 1024,
+   "title": "Infilata delle sale storiche verso il ricevimento, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-salotto-damasco.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Salotto barocco con damasco verde e divani rossi, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-tavoli-gala.webp",
+   "width": 682,
+   "height": 1024,
+   "title": "Tavoli della cena di gala sotto gli specchi dorati, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
+  {
+   "src": "/images/portfolio/eventi/iamfa-palazzo-borghese-firenze-affresco-soffitto.webp",
+   "width": 1024,
+   "height": 682,
+   "title": "Dettaglio dell'affresco sul soffitto, Palazzo Borghese Firenze",
+   "caption": "IAMFA — Palazzo Borghese, Firenze"
+  },
   {
    "src": "/images/portfolio/eventi/Slowear-Opening-FDM-Color-10-copia.jpg",
    "width": 1601,

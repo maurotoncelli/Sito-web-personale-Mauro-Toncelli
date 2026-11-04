@@ -11,11 +11,13 @@ const logos = [
   { src: "/images/clienti/Engels-Volkers-logo-copia.jpg", alt: "Engel & Völkers" },
   { src: "/images/clienti/Castelfalfi-resort-logo-copia.jpg", alt: "Castelfalfi Resort" },
   { src: "/images/clienti/Officine-Bocelli-logo-copia.jpg", alt: "Officine Bocelli" },
+  { src: "/images/clienti/IAMFA-logo.jpg", alt: "IAMFA — International Association of Museum Facility Administrators" },
+  { src: "/images/clienti/IOLC-logo.jpg", alt: "IOLC — International Oncology Leadership Conference" },
 ];
 
 export function ClientLogos() {
   return (
-    <div className="grid grid-cols-3 items-center gap-6 sm:grid-cols-5">
+    <div className="grid grid-cols-3 items-center gap-6 sm:grid-cols-4 lg:grid-cols-6">
       {logos.map((logo) => (
         <div key={logo.src} className="relative mx-auto h-16 w-full max-w-[120px]">
           <Image
